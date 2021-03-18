@@ -1,0 +1,17 @@
+<nb-card-body>
+  <ul class="traffic-list">
+    <li *ngFor="let item of scenarios; let i = index" (click)="optionSelected($event)" [attr.data-index]="i">
+      {{ item.scenario }}
+      <div class="rating">
+        <ngb-rating [(rate)]="item.rating" max=5 readonly="true">
+          <ng-template #t let-fill="fill">
+            <span class="star fill" [class.filled]="fill === 100">
+              <i class="ion-ios-heart" *ngIf="fill === 100"></i>
+              <i class="ion-ios-heart-outline" *ngIf="fill !== 100"></i>
+            </span>
+          </ng-template>
+        </ngb-rating>
+      </div>
+    </li>
+  </ul>
+</nb-card-body>

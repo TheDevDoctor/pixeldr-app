@@ -1,0 +1,17 @@
+<nb-flip-card [showToggleButton]="false" [flipped]="flipped">
+  <nb-card-front>
+    <nb-card size="large">
+      <ngx-top-pop-header></ngx-top-pop-header>
+      <ngx-front (selectedEvent)='listItemSelected($event)' [scenarios]="scenarios"></ngx-front>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card size="large">
+      <nb-card-header>
+        <span>Notable Scenarios</span>
+      </nb-card-header>
+      <i class="nb-arrow-right" (click)="toggleView()"></i>
+      <ngx-back [currentScenario]="currentScenario"></ngx-back>
+    </nb-card>
+  </nb-card-back>
+</nb-flip-card>

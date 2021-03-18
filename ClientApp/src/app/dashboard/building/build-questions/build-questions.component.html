@@ -1,0 +1,173 @@
+<div class="row">
+  <div class="col-xxl-12">
+    <nb-card size="xxsmall">
+      <nb-card-body>
+        <div [(ngModel)]="selectedQuestion" ngbRadioGroup data-toggle="buttons" class="btn-group-toggle">
+          <label ngbButtonLabel class="btn btn-icon">
+            <input ngbButton type="radio" value="1" />1
+          </label>
+          <label ngbButtonLabel class="btn btn-icon">
+            <input ngbButton type="radio" value="2" />2
+          </label>
+          <label ngbButtonLabel class="btn btn-icon">
+            <input ngbButton type="radio" value="3" />3
+          </label>
+          <label ngbButtonLabel class="btn btn-icon">
+            <input ngbButton type="radio" value="4" />4
+          </label>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-8">
+    <nb-card size="large" class="question-card">
+      <div class="chart-container">
+        <ngx-status-card *ngFor="let option of qOptions; let i = index" [type]="option.status" [mini]="true" [on]="false"
+          (click)="optionSelected(i)">
+          <i class="fas {{ option.icon }}"></i>
+        </ngx-status-card>
+      </div>
+      <div class="consumption-table">
+        <div class="row">
+          <div [ngClass]="qOptions[0].isOn ? 'col-lg-7 col-xl-8' : 'col-lg-12'">
+            <textarea [(ngModel)]="question" nbInput fullWidth class="question" placeholder="Question"></textarea>
+          </div>
+          <div class="col-lg-5 col-xl-4" *ngIf="qOptions[0].isOn">
+            <span class="input-group-addon success">RR</span>
+            <input type="number" nbInput fieldSize="medium" class="input-with-icon" placeholder="/minute">
+            <span class="input-group-addon success">HR</span>
+            <input type="number" nbInput fieldSize="medium" class="input-with-icon" placeholder="/minute">
+            <span class="input-group-addon success">O2</span>
+            <input type="number" nbInput fieldSize="medium" class="input-with-icon" placeholder="%">
+            <span class="input-group-addon success">T</span>
+            <input type="number" nbInput fieldSize="medium" class="input-with-icon" placeholder="Degrees">
+            <span class="input-group-addon success">BP</span>
+            <input type="text" nbInput fieldSize="medium" class="input-with-icon" placeholder="systolic/diastolic">
+          </div>
+        </div>
+        <div class="row" *ngIf="qOptions[1].isOn">
+          <div class="col-xxl-12">
+            <div class="ix-container cont">
+              <div class="search-container">
+                <div style="padding: 1rem;">
+                  <input nbInput fullWidth fieldSize="medium" placeholder="Search..." [(ngModel)]="quantSrchText"
+                    (ngModelChange)="searchIxChanged($event)">
+                </div>
+                <nb-list>
+                  <nb-list-item *ngFor="let t of searchQuantIx; let i = index" (click)="ixSelected(t)">
+                    {{ t }}
+                  </nb-list-item>
+                </nb-list>
+              </div>
+              <div class="adapted-container">
+                <h4 *ngIf="addedQuantIx.length === 0" class="text-hint">No Investigations Added</h4>
+                <nb-accordion>
+                  <nb-accordion-item *ngFor="let test of addedQuantIx">
+                    <nb-accordion-item-header>{{ test.name }}</nb-accordion-item-header>
+                    <nb-accordion-item-body>
+                      <div class="ix-item-row" *ngFor="let item of test.data.order">
+                        <div class="ix-label left">
+                          <p>{{ item }}</p>
+                        </div>
+                        <div class="input-container" style="flex: 1 1 auto;">
+                          <input nbInput fieldSize="medium" class="ix-input" placeholder="Value">
+                        </div>
+                        <div class="ix-label right">
+                          <p>{{ test.data.data[item][1] + ' ' + test.data.data[item][2] }}</p>
+                        </div>
+                      </div>
+                    </nb-accordion-item-body>
+                  </nb-accordion-item>
+                </nb-accordion>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" *ngIf="qOptions[2].isOn">
+          <div class="col-xxl-12">
+            <div class="cont image-cont">
+              <h6>This feature has not yet been finished.</h6>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xxl-12">
+            <hr class="ans-sep">
+            <div class="answers">
+              <div class="topBar">
+                <div style="display: flex;">
+                  <h5>Answers</h5>
+                  <div class="cont answer-counter">
+                    <i class="arrow nb-arrow-dropleft" (click)="counterPressed(false)"></i>
+                    <p class="counter">{{ answerCount }}</p>
+                    <i class="arrow nb-arrow-dropright" (click)="counterPressed(true)"></i>
+                  </div>
+                </div>
+                <div style="display: inline-flex;">
+                  <h5>Type: </h5>
+                  <div [(ngModel)]="answerType" ngbRadioGroup class="btn-group btn-group-toggle btn-outline-toggle-group btn-toggle-radio-group">
+                    <label ngbButtonLabel class="btn btn-outline-primary">
+                      <input ngbButton type="radio" value="sba"> SBA
+                    </label>
+                    <label ngbButtonLabel class="btn btn-outline-primary">
+                      <input ngbButton type="radio" value="mcq"> MCQ
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="answers-container">
+                <div class="answerRow" *ngFor="let ans of answers; let i = index">
+                  <input nbInput fullWidth fieldSize="medium" placeholder="Answer">
+                  <button nbButton class="correct-tick" [ngClass]="{'selected': ans.correct}" (click)="correctSelected(i)"><i
+                      class="nb-checkmark"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nb-card>
+  </div>
+  <div class="col-xl-4">
+    <nb-card size="large">
+      <nb-card-header>Details and Explanation</nb-card-header>
+      <nb-card-body>
+        <input class="bottomMargin" nbInput fullWidth fieldSize="medium" placeholder="Specialty">
+        <div class="input-group dropdown bottomMargin" ngbDropdown>
+          <button class="btn btn-outline-primary" type="button" ngbDropdownToggle>
+            {{ !!qDiff ? qDiff : 'Difficulty' }}
+          </button>
+          <ul ngbDropdownMenu class="dropdown-menu">
+            <li class="dropdown-item" *ngFor="let diff of difficulties" (click)="changeDifficulty(diff)">
+              {{ diff }}
+            </li>
+          </ul>
+        </div>
+        <input class="bottomMargin" nbInput fullWidth fieldSize="medium" placeholder="Exam">
+        <h5 class="bottomMargin">Explanation</h5>
+        <textarea [(ngModel)]="explanation" class="explanation" nbInput fullWidth class="bottomMargin" placeholder="Question Explanation"></textarea>
+
+        <div>
+          <h5 style="display: inline-block; margin-bottom: 0;">Links</h5>
+          <span><i class="nb-plus-circled" (click)="addLink()"></i></span>
+        </div>
+        <div class="linksCont">
+          <div *ngFor="let link of links; let i=index" class="input-group has-person-icon">
+            <input class="bottomMargin" [(ngModel)]="links[i].link" (ngModelChange)="linkKeyUp(i)" nbInput fullWidth fieldSize="medium"
+              placeholder="Link" class="link-input">
+            <i *ngIf="!links[i].isUrl" class="fas fa-globe left"></i>
+            <div class="close-icon" (click)="removeLink(i)">
+              <i class="nb-close-circled"></i>
+            </div>
+            <a *ngIf="links[i].isUrl" [href]="links[i].link" target="_blank">
+              <i class="left" [style.content]="'url(http://s2.googleusercontent.com/s2/favicons?domain_url=' + links[i].link + ')'"></i>
+            </a>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

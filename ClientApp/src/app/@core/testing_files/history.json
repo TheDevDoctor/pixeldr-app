@@ -1,0 +1,43 @@
+{
+    "History": {
+        "Correct": {
+            "Why are you not feeling very well?": "What appears to be the problem?",
+            "Where is the pain?": "Where is the pain?",
+            "When did the pain start?": "when did the pain start?",
+            "What is the pain like?": "what does the pain feel like?",
+            "Does the pain radiate anywhere?": "does the pain move anywhere?",
+            "Have you had any other symptoms?": "do you have any associated symptoms?",
+            "Does the pain come and go?": "Does the pain come and go?",
+            "How bad is the pain.": "How bad is the pain?",
+            "Do you have high blood pressure?": "Do you have high blood pressure?",
+            "Do you have any past medical conditions?": "Do you have any past medical conditions?",
+            "Do you have any family history of any medical conditions?": "Is there any family history?",
+            "Do you take any medications?": "Do you take any medication?",
+            "Do you smoke?": "Do you smoke?",
+            "How much alcohol do you drink?": "Do you drink much?",
+            "Do you have any concerns?": "Any concerns?"
+        },
+        "AdaptedResponses": {
+            "Have you had any other symptoms?": "I feel really sick right now, that started about an hour ago as well. But I reckon that is just due to the pain. ",
+            "How much alcohol do you drink?": "Not much. Perhaps a few beers on the weekend. But not very often at all. ",
+            "Do you take any medications?": "So I am taking amlodipine for the high blood pressure, I think that is 10mg once a day. For my knee I use a cream called diclofenac.That worked very well for a long time but recently it hasn't been managing it very well. ",
+            "Do you have any past medical conditions?": "So I have the high blood pressure. But i'm taking treatment for that and I've been on that for 5 years. Oh, yeah, I have arthritis in my left knee as well. ",
+            "What is you living situation?": "I live at home with my wife, both my children have grown up now and moved out. ",
+            "Do you have any family history of any medical conditions?": "My father died of a heart attack at 74 and my mother died of a stroke last year, She was 80 at the time. My brother and sister are both well though. They're younger than me but not by much. Two sons as well, both well.  ",
+            "What is the pain like?": "It feels like somebody is sitting on my chest. I've never felt anything like it before.",
+            "Do you have any concerns?": "Well, it's probably just indigestion. I get that a lot, but never anything this bad. ",
+            "Do you smoke?": "Yeah I've smoked for the last 20 years. ",
+            "Where is the pain?": "It's sort of in the centre of my chest. ",
+            "I&#39;m sorry to hear that.": "That's okay doc just please can you help me. ",
+            "How bad is the pain.": "Doctor it's awful, I don't want to say a 10, but at least a 9. ",
+            "Does the pain come and go?": "No, it's just been really bad for the last hour. ",
+            "Does the pain radiate anywhere?": "So I've developed a tightness in my jaw but I don't notice it much. The pain in my chest is far worse.",
+            "How much do you smoke?": "Hmm, usually about a pack of 20 a day. Sometimes less. Though, i'll admit, sometimes more. ",
+            "Does anything make the pain better?": "I haven't taken anything doctor the pain was so bad I came straight down. I only live a five minute walk away so just rushed out. I maybe should have called an ambulance but I hate to be a bother. ",
+            "When did the pain start?": "I'd say the pain started around an hour ago. I came down pretty quickly.  ",
+            "1": "Well, I've been feeling quite unwell the last few days. But this morning I developed really bad chest pain so I figured I should come down straight away. ",
+            "Hi": "Owww, Doc I'm in quite a bit of pain here please help.",
+            "Do you take any recreational drugs?": "Not for a very long time doctor and I never did anything hard. "
+        }
+    }
+}

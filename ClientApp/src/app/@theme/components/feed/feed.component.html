@@ -1,0 +1,11 @@
+<nb-list>
+  <nb-list-item *ngFor="let item of news; let i = index">
+    <h6 class='article-title'>{{ item.title }}</h6>
+    <div class='article-description'>
+      {{ item.description }}
+    </div>
+    <div class='article-footer'>
+      {{ item.source.name }}<span style="float: right;">{{ item.publishedAt | date:'medium' }}</span>
+    </div>
+  </nb-list-item>
+</nb-list>

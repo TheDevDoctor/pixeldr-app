@@ -1,0 +1,29 @@
+<nb-card size="large">
+  <nb-card-body>
+    <nb-tabset fullWidth>
+      <nb-tab tabTitle="Adapted Responses">
+        <nb-list>
+          <nb-list-item *ngFor="let adapted of adaptationsArr; let i = index">
+            <div class="adapted-header">
+              <h5 class="question-adapted">{{ adapted.question }}</h5>
+              <i class="nb-close-circled" (click)="deleteAdapted(i)"></i>
+            </div>
+            <textarea nbInput fullWidth [placeholder]="adapted.originalText" [(ngModel)]="adapted.adaptedText" (ngModelChange)="adaptedTextChanged($event, adapted, i)"></textarea>
+            <!-- {{textValue}} -->
+          </nb-list-item>
+        </nb-list>
+      </nb-tab>
+      <nb-tab tabTitle="Correct Questions">
+        <nb-list>
+          <nb-list-item *ngFor="let qDict of correctQsArr; let i = index">
+            <div>
+              <h5 style="display: inline-block;">{{ qDict.question }}</h5>
+              <i class="nb-close-circled" (click)="deleteCorrect(i)"></i>
+            </div>
+            <!-- {{textValue}} -->
+          </nb-list-item>
+        </nb-list>
+      </nb-tab>
+    </nb-tabset>
+  </nb-card-body>
+</nb-card>

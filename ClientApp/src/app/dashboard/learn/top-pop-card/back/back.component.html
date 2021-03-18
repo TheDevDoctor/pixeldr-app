@@ -1,0 +1,35 @@
+<nb-card-body>
+  
+  <div class="cameras single-view">
+    <div class="camera" [style.background-image]="'url(' + selectedCamera.source + ')'">
+      <span>{{ currentScenario.scenario }}
+        <div class="container-btn">
+          <button class="btn btn-hero-info" size="xsmall">Playlist</button>
+          <div class="divider"></div>
+          <button class="btn btn-hero-success" size="xsmall">Play</button>
+        </div>
+      </span>
+    </div>
+  </div>
+  <div class="description">
+    {{ currentScenario.description }}
+  </div>
+</nb-card-body>
+<div class="summary-container">
+  <div class="summory">
+    <div class="title">Rating</div>
+    <div class="value">{{ currentScenario.rating }}</div>
+  </div>
+  <div class="summory">
+    <div class="title">Plays</div>
+    <div class="value">{{ currentScenario.played }}</div>
+  </div>
+  <div class="summory">
+    <div class="title">Difficulty</div>
+    <div class="value">{{ currentScenario.difficulty }}</div>
+  </div>
+</div>
+<nb-card-footer>
+  <span>Created 05/09/2018</span>
+  <nb-user name="Matthew Stubbs"></nb-user>
+</nb-card-footer>

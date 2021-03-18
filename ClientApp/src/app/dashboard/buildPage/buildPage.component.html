@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-6">
+    <ngx-current-builds></ngx-current-builds>
+  </div>
+  <div class="col-md-6">
+    <nb-card size="xxsmall">
+      <nb-card-body class="buttons-card">
+          <button nbButton hero fullWidth status="info" (click)="enterBuilding('scenario')">Build Scenario</button>
+          <div class="seperator"></div>
+          <button nbButton hero fullWidth status="warning" (click)="enterBuilding('questions')">Build Questions</button>
+      </nb-card-body>
+    </nb-card>
+    <ngx-build-data></ngx-build-data>
+  </div>
+</div>

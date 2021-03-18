@@ -1,0 +1,33 @@
+<div class="header">Currently playing</div>
+
+<div class="body">
+
+  <div class="currentScenarioInfo" *ngIf="scenario">
+    <div class="currentScenarioImage" style.background-image="url('{{scenario?.image}}')"></div>
+    <div class="currentScenarioDetails">
+      <h4>{{ scenario?.name }}</h4>
+      <span>{{ scenario?.author }}</span>
+    </div>
+  </div>
+
+  <div class="currentScenarioInfo" *ngIf="!scenario">
+    <div class="currentScenarioImage" [style.background-image]="'url(assets/images/defaultScenarioImage.png)'"></div>
+    <div class="currentScenarioDetails">
+      <h4>No scenario playing</h4>
+      <span>Go to the Learn tab to get started</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <nb-actions size="medium" fullWidth>
+    <nb-action>
+      <i class="nb-play-outline"></i><span>Play</span>
+    </nb-action>
+    <nb-action>
+      <i class="nb-gear"></i><span>Settings</span>
+    </nb-action>
+  </nb-actions>
+</div>
+

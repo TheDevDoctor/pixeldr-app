@@ -1,0 +1,61 @@
+<nb-flip-card [showToggleButton]="false" [flipped]="flipped">
+  <nb-card-front>
+    <nb-card size="large">
+      <nb-card-header>
+        <span>Statistics</span>
+        <i class="nb-arrow-right" (click)="toggleView()"></i>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="settings-container stats-container" *ngIf="dict['Timer']">
+          <div class="stat-row">
+            <div class="col-sm-4">
+              <div class="stat">
+                <div class="time-label">
+                  <span>Elapsed:</span>
+                </div>
+                <div class="time-counter">
+                  <span>{{counter | timing}}</span>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-sm-1"></div> -->
+            <div class="col-sm-8">
+              <div class="small-label">
+                <span>Q. Count:</span>
+                <span class="q-counter">12</span>
+              </div>
+              <div class="small-label">
+                <span>Time/Q:</span>
+                <span class="q-counter">00:11</span>
+              </div>
+              <div class="small-label">
+                <span>Inactive:</span>
+                <span class="q-counter">00:32</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-container mood-container" *ngIf="dict['Mood']">
+          <ngx-temperature></ngx-temperature>
+        </div>
+        <div class="settings-container mood-container" *ngIf="dict['Covered']">
+            <ngx-d3-bar></ngx-d3-bar>
+          </div>
+      </nb-card-body>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card size="large">
+      <nb-card-header>
+        <span>Statistics Settings</span>
+        <i class="nb-arrow-right" (click)="toggleView()"></i>
+      </nb-card-header>
+      <nb-card-body>
+        <ngx-status-card *ngFor="let ctrl of controls" [title]="ctrl.name" [type]="ctrl.type" (cardPressed)="settingChanged($event)">
+          <i [class]="ctrl.icon.name" [style.font-size.rem]="ctrl.icon.size"></i>
+        </ngx-status-card>
+      </nb-card-body>
+    </nb-card>
+  </nb-card-back>
+</nb-flip-card>

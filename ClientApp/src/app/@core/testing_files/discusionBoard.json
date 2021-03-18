@@ -1,0 +1,81 @@
+[
+    {
+        "id": "Stubbsy345-DiscussionBoard-1",
+        "username": "PixelDr",
+        "topic": "Issues & Bugs",
+        "title": "PixelDr needs you! Help us squash some bugs!",
+        "post": "Hey everyone. Firstly thank you for visiting the PixelDr site, and we hope you've checked out the game already. We're currently entering our beta phase and we really need your help. As with any new platform, there are many bugs to squash, and we rely on our eagle-eyed community to help us find them. When you're playing PixelDr, if you identify a potential issue or bug, please let us know on this discussion board so we can get it fixed. Thank you so much for your help, without our community we wouldn't be able to make the PixelDr platform a success!",
+        "dateTimePosted": "2017-09-15T13:45:30",
+        "comments": [
+            {
+                "username": "Stubbsy345",
+                "timestamp": "2017-09-15T13:45:30",
+                "comment": "This is a comment"
+            },
+            {
+                "username": "Grimble69",
+                "timestamp": "This is another comment",
+                "comment": "This is a comment"
+            },
+            {
+                "username": "Staton09",
+                "timestamp": "This is another comment",
+                "comment": "This is a really really really reallyreally really really really really really really really really reallyreally really really really really really really really really reallyreally really really really really really really really really reallyreally really really really really really really really really reallyreally really really really really really really really really reallyreally really really really really really long comment"
+            },
+            {
+                "username": "Grimble69",
+                "timestamp": "This is another comment",
+                "comment": "This is a comment"
+            },
+            {
+                "username": "Staton09",
+                "timestamp": "This is another comment",
+                "comment": "This is a really really really reallyreally really really really really really really really really reallyreally really really really really really really really really reallyreally really really really really really really really really reallyreally really really really really really really really really reallyreally really really really really really really really really reallyreally really really really really really long comment"
+            }
+        ],
+        "_rid": "VWIoAO0VRxgBAAAAAAAAAA==",
+        "_self": "dbs/VWIoAA==/colls/VWIoAO0VRxg=/docs/VWIoAO0VRxgBAAAAAAAAAA==/",
+        "_etag": "\"00003801-0000-0000-0000-5bc319c70000\"",
+        "_attachments": "attachments/",
+        "_ts": 1539512775
+    },
+    {
+        "id": "Stubbsy345-DiscussionBoard-1",
+        "username": "Stubbsy345",
+        "topic": "Issues & Bugs",
+        "title": "Has there ever been a better educational platform.",
+        "post": "The has almost definitely never been a better platform for medical education. But this is not a autocracy, have your say!",
+        "dateTimePosted": "2017-09-15T13:45:30",
+        "comments": [
+            {
+                "username": "Grimble69",
+                "timestamp": "2017-09-15T13:45:30",
+                "comment": "Pastest is nowhere near as good as this platform, you're completely right."
+            },
+            {
+                "username": "Staton09",
+                "timestamp": "This is another comment",
+                "comment": "Passtest has nothing on this."
+            }
+        ],
+        "_rid": "VWIoAO0VRxgBAAAAAAAAAA==",
+        "_self": "dbs/VWIoAA==/colls/VWIoAO0VRxg=/docs/VWIoAO0VRxgBAAAAAAAAAA==/",
+        "_etag": "\"00003801-0000-0000-0000-5bc319c70000\"",
+        "_attachments": "attachments/",
+        "_ts": 1539512775
+    },
+    {
+        "id": "Stubbsy345-DiscussionBoard-1",
+        "username": "PixelDr",
+        "topic": "Issues & Bugs",
+        "title": "PixelDr needs you! Help us squash some bugs!",
+        "post": "Hey everyone. Firstly thank you for visiting the PixelDr site, and we hope you've checked out the game already. We're currently entering our beta phase and we really need your help. As with any new platform, there are many bugs to squash, and we rely on our eagle-eyed community to help us find them. When you're playing PixelDr, if you identify a potential issue or bug, please let us know on this discussion board so we can get it fixed. Thank you so much for your help, without our community we wouldn't be able to make the PixelDr platform a success!",
+        "dateTimePosted": "2017-09-15T13:45:30",
+        "comments": [],
+        "_rid": "VWIoAO0VRxgBAAAAAAAAAA==",
+        "_self": "dbs/VWIoAA==/colls/VWIoAO0VRxg=/docs/VWIoAO0VRxgBAAAAAAAAAA==/",
+        "_etag": "\"00003801-0000-0000-0000-5bc319c70000\"",
+        "_attachments": "attachments/",
+        "_ts": 1539512775
+    }
+]

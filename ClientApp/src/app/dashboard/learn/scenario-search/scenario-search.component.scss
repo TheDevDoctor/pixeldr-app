@@ -1,0 +1,68 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+    // nb-card-body {
+    //     padding: 0;
+    // }
+
+    nb-tabset ul {
+        border: 0;
+        border: none;
+        border-bottom: none;
+        border-color: none;
+        padding: 0;
+    }
+
+    nb-tabset {
+        display: inline-block;
+        float: right;
+        border-bottom: 0px;
+        margin: -1px;
+        padding: 0;
+    }
+
+    nb-tab {
+        border:0;
+        padding: 0;
+    }
+
+    nb-card-header {
+        padding: 0;
+    }
+
+    .title {
+        padding-left: 1.25rem;
+        height: 100%;
+        position: relative;
+        top: 1.25rem;
+
+    }
+
+    .input-group {
+        padding: 0rem 0rem 1rem 0rem;
+    }
+
+    .form-control {
+        height: 2.8rem;
+    }
+
+    .bottom-buttons {
+        // width: 100%;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+
+        .btn {
+            width:49%;
+            display: inline-block;
+            // display: block;
+        }
+
+        .padding {
+            display: inline-block;
+            width: 2%;
+        }
+    }
+    
+}

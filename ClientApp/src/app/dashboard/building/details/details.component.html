@@ -1,0 +1,95 @@
+<div class="row">
+  <div class="col-md-6 col-lg-5">
+    <nb-card size="large">
+      <nb-card-header>Scenario Details</nb-card-header>
+      <nb-card-body>
+        <input type="text" nbInput fullWidth [(ngModel)]="scenarioDetails.scenarioName" fieldSize="medium" placeholder="Scenario Name">
+        <div class="input-group dropdown" ngbDropdown>
+          <button class="btn btn-outline-primary" type="button" ngbDropdownToggle>
+              {{ scenarioDetails.specialty ? scenarioDetails.specialty : "Specialty" }}
+          </button>
+          <ul ngbDropdownMenu class="dropdown-menu">
+            <li class="dropdown-item" *ngFor="let spec of specialties" (click)="changeSpec(spec)">
+              {{ spec.name }}
+            </li>
+          </ul>
+        </div>
+        <div class="input-group dropdown" ngbDropdown>
+          <button class="btn btn-outline-primary" type="button" ngbDropdownToggle>
+              {{ scenarioDetails.difficulty ? scenarioDetails.difficulty : "Difficulty" }}
+          </button>
+          <ul ngbDropdownMenu class="dropdown-menu">
+            <li class="dropdown-item" *ngFor="let diff of difficulties" (click)="changeDiff(diff)">
+              {{ diff }}
+            </li>
+          </ul>
+        </div>
+        <div class="text-area">
+          <textarea nbInput fullWidth [(ngModel)]="scenarioDetails.blurb" placeholder="Scenario Blurb"></textarea>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-6 col-lg-7">
+    <nb-card size="large">
+      <nb-card-header>Patient Details</nb-card-header>
+      <nb-card-body class="vitals-body">
+        <div class="row">
+          <div class="col-md-6" id="obs">
+            <input [(ngModel)]="patientDetails.firstName" type="text" nbInput fullWidth fieldSize="medium" placeholder="First Name">
+          </div>
+          <div class="col-md-6">
+            <input [(ngModel)]="patientDetails.secondName" type="text" nbInput fullWidth fieldSize="medium" placeholder="Second Name">
+          </div>
+        </div>
+        <div class="row padded-line">
+          <div class="col-md-6">
+            <input [(ngModel)]="patientDetails.age" type="number" nbInput fullWidth fieldSize="medium" placeholder="Age">
+          </div>
+          <div class="col-md-6">
+            <span class="input-group-addon success">PX</span>
+            <input [(ngModel)]="patientDetails.hospNum" type="number" nbInput fieldSize="medium" class="input-with-icon" placeholder="Hospital Number">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <span class="right input-group-addon success">m</span>
+            <input type="number" [(ngModel)]="patientDetails.height" nbInput fullWidth fieldSize="medium" class="input-with-icon-right" placeholder="Height">
+          </div>
+          <div class="col-md-6">
+            <span class="right input-group-addon success">kg</span>
+            <input type="number" [(ngModel)]="patientDetails.weight" nbInput fullWidth fieldSize="medium" class="input-with-icon-right" placeholder="Weight">
+          </div>
+        </div>
+        <div class="col-md-12 PC">
+          <input [(ngModel)]="patientDetails.presentingComplaint" type="text" nbInput fullWidth fieldSize="medium" placeholder="Presenting Complaint">
+        </div>
+        <label id="observation-label">OBSERVATIONS</label>
+        <div class="row">
+          <div class="col-md-6" id="obs">
+            <input [(ngModel)]="vitals.rr" type="number" nbInput fullWidth fieldSize="medium" placeholder="Respiratory rate">
+          </div>
+          <div class="col-md-6">
+            <input [(ngModel)]="vitals.hr" type="number" nbInput fullWidth fieldSize="medium" placeholder="Heart rate">
+          </div>
+        </div>
+        <div class="row padded-line">
+          <div class="col-md-6">
+            <input [(ngModel)]="vitals.oxygenSat" type="number" nbInput fullWidth fieldSize="medium" placeholder="Oxygen Saturations">
+          </div>
+          <div class="col-md-6">
+            <input [(ngModel)]="vitals.temp" type="number" nbInput fullWidth fieldSize="medium" placeholder="Temperature">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <input [(ngModel)]="vitals.bp.systolic" type="number" nbInput fullWidth fieldSize="medium" placeholder="BP systolic">
+          </div>
+          <div class="col-md-6">
+            <input [(ngModel)]="vitals.bp.diastolic" type="number" nbInput fullWidth fieldSize="medium" placeholder="BP diastolic">
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

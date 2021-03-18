@@ -1,0 +1,937 @@
+{
+    "questions": [
+        {
+            "qNum": "1",
+            "question": "Why are you not feeling very well?",
+            "originalResponse": "I'm just not feeling very well.",
+            "display": true
+        },
+        {
+            "qNum": "2",
+            "question": "Have you noticed any weakness?",
+            "originalResponse": "No, I haven't noticed any weakness.",
+            "display": true
+        },
+        {
+            "qNum": "3",
+            "question": "Have you had any sleep disturbance?",
+            "originalResponse": "My sleeping has been fine.",
+            "display": true
+        },
+        {
+            "qNum": "4",
+            "question": "Have you had any changes in vision?",
+            "originalResponse": "No I haven't noticed any visual disturbance.",
+            "display": true
+        },
+        {
+            "qNum": "5",
+            "question": "Have you had any neck stiffness?",
+            "originalResponse": "No I haven't had any neck stiffness.",
+            "display": true
+        },
+        {
+            "qNum": "6",
+            "question": "Have you had any changes in your bowel habit?",
+            "originalResponse": "No, my bowels have been fine.",
+            "display": true
+        },
+        {
+            "qNum": "7",
+            "question": "Have you taken anything for the pain?",
+            "originalResponse": "No I havent taken anything.",
+            "display": true
+        },
+        {
+            "question": "Is the pain worse when you lean forward?",
+            "originalResponse": "What do you mean? I havent got any pain at the moment?",
+            "display": true,
+            "qNum": "8"
+        },
+        {
+            "question": "Have you ever been catheterised?",
+            "originalResponse": "No, I havent ever had a catheter put in before.",
+            "display": true,
+            "qNum": "9"
+        },
+        {
+            "question": "Do you dribble after you pass water?",
+            "originalResponse": "No, I dont have any problems like that usually.",
+            "display": true,
+            "qNum": "10"
+        },
+        {
+            "question": "When did you last open you bowels?",
+            "originalResponse": "Hmm, I would say around about 3/4 hours ago.",
+            "display": true,
+            "qNum": "11"
+        },
+        {
+            "question": "Is it difficult to pass water?",
+            "originalResponse": "No it's easy for me to go to the toilet, never had any problem actually going for a wee.",
+            "display": true,
+            "qNum": "12"
+        },
+        {
+            "question": "Do you need to go the the toilet at night?",
+            "originalResponse": "No I never get up to go to the toilet at night.",
+            "display": true,
+            "qNum": "13"
+        },
+        {
+            "question": "Is there any blood in your urine?",
+            "originalResponse": "No, there isnt any blood in my urine.",
+            "display": true,
+            "qNum": "14"
+        },
+        {
+            "question": "Do you ever wet yourself?",
+            "originalResponse": "No I I always make it to the toilet.",
+            "display": true,
+            "qNum": "15"
+        },
+        {
+            "question": "Is it painful passing water?",
+            "originalResponse": "No its not painful when I wee.",
+            "display": true,
+            "qNum": "16"
+        },
+        {
+            "question": "Do you have problems weeing?",
+            "originalResponse": "No, I dont have any problems weeing.",
+            "display": true,
+            "qNum": "17"
+        },
+        {
+            "question": "How often do you urinate?",
+            "originalResponse": "A normal amount.",
+            "display": true,
+            "qNum": "18"
+        },
+        {
+            "question": "What was the address I told you?",
+            "originalResponse": "42 west registrar street.",
+            "display": true,
+            "qNum": "19"
+        },
+        {
+            "question": "Who do you live with?",
+            "originalResponse": "I live by myself.",
+            "display": true,
+            "qNum": "20"
+        },
+        {
+            "question": "How is your diet?",
+            "originalResponse": "My diet is good I think. I try to eat 5 a day. I try and keep things as balanced as possible.",
+            "display": true,
+            "qNum": "21"
+        },
+        {
+            "question": "Are you eating and drinking?",
+            "originalResponse": "Yes I am eating and drinking normally",
+            "display": true,
+            "qNum": "22"
+        },
+        {
+            "question": "When did you last have intercourse?",
+            "originalResponse": "I cant remember doctor. Not for a long time. But we used condoms anyway.",
+            "display": true,
+            "qNum": "23"
+        },
+        {
+            "question": "Are you pregnant?",
+            "originalResponse": "No, no chance of me being pregnant.",
+            "display": true,
+            "qNum": "24"
+        },
+        {
+            "question": "Have you had any recent trauma?",
+            "originalResponse": "Hmm, no, I havent had any recent trauma.",
+            "display": true,
+            "qNum": "25"
+        },
+        {
+            "question": "Have you noticed any changes in your skin?",
+            "originalResponse": "No my skin is completely fine.",
+            "display": true,
+            "qNum": "26"
+        },
+        {
+            "question": "Do your hands get very cold when outside?",
+            "originalResponse": "No, my hands are fine usually.",
+            "display": true,
+            "qNum": "27"
+        },
+        {
+            "question": "Does your skin feel tight?",
+            "originalResponse": "No, my skin doesnt feel tight. I moisturise.",
+            "display": true,
+            "qNum": "28"
+        },
+        {
+            "question": "Are you having problems swallowing liquids and solids?",
+            "originalResponse": "No, I am not having any trouble swallowing.",
+            "display": true,
+            "qNum": "29"
+        },
+        {
+            "question": "Can you count down from 20?",
+            "originalResponse": "Yeah. 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1.",
+            "display": true,
+            "qNum": "30"
+        },
+        {
+            "question": "Whats the name for the current monarch?",
+            "originalResponse": "Queen Elizabeth",
+            "display": true,
+            "qNum": "31"
+        },
+        {
+            "question": "When was the first world war?",
+            "originalResponse": "1914 to 1918",
+            "display": true,
+            "qNum": "32"
+        },
+        {
+            "question": "Can you tell me who that is?",
+            "originalResponse": "Yeah thats the nurse.",
+            "display": true,
+            "qNum": "33"
+        },
+        {
+            "question": "Do you know who I am?",
+            "originalResponse": "Yeah youre the doctor.",
+            "display": true,
+            "qNum": "34"
+        },
+        {
+            "question": "Do you know where you are?",
+            "originalResponse": "Yes, Im in the pixel hospital.",
+            "display": true,
+            "qNum": "35"
+        },
+        {
+            "question": "What is the current year.",
+            "originalResponse": "Its [currentYear]",
+            "display": true,
+            "qNum": "36"
+        },
+        {
+            "question": "Im going to tell you an address. 42 west register street. Can you remember that for me.",
+            "originalResponse": "Yeah, okay, no problem.",
+            "display": true,
+            "qNum": "37"
+        },
+        {
+            "question": "What is the time?",
+            "originalResponse": "It is [currentTime].",
+            "display": true,
+            "qNum": "38"
+        },
+        {
+            "question": "Do you have any concerns?",
+            "originalResponse": "No theres nothing Im that concerned about.",
+            "display": true,
+            "qNum": "39"
+        },
+        {
+            "question": "Do you have asthma?",
+            "originalResponse": "No, I dont have asthma.",
+            "display": true,
+            "qNum": "40"
+        },
+        {
+            "question": "Yeah",
+            "originalResponse": "Thanks!",
+            "display": false,
+            "qNum": "41"
+        },
+        {
+            "question": "I will do.",
+            "originalResponse": "Thanks",
+            "display": false,
+            "qNum": "42"
+        },
+        {
+            "question": "Im just going to order some investigations.",
+            "originalResponse": "Okay, let me know as soon as you do.",
+            "display": false,
+            "qNum": "43"
+        },
+        {
+            "question": "Okay thanks for that.",
+            "originalResponse": "No problem Dr [playerSurname]",
+            "display": false,
+            "qNum": "44"
+        },
+        {
+            "question": "Have you had your appendix removed?",
+            "originalResponse": "No, Ive still got my appendix.",
+            "display": true,
+            "qNum": "45"
+        },
+        {
+            "question": "What do you mean by palpitations?",
+            "originalResponse": "Im not having any palpitations, so I dont know what youre talking about.",
+            "display": true,
+            "qNum": "46"
+        },
+        {
+            "question": "Have you had any palpitations?",
+            "originalResponse": "No, I havent noticed any palpitations.",
+            "display": true,
+            "qNum": "47"
+        },
+        {
+            "question": "When did you last urinate?",
+            "originalResponse": "For a wee? Quite recently I think.",
+            "display": true,
+            "qNum": "48"
+        },
+        {
+            "question": "Have you been passing urine?",
+            "originalResponse": "Yeah Ive been passing urine normally.",
+            "display": true,
+            "qNum": "49"
+        },
+        {
+            "question": "Do you have any ideas?",
+            "originalResponse": "No not really, Ill leave that up to you. Wouldnt be much of a game if I gave you the answer would it.",
+            "display": true,
+            "qNum": "50"
+        },
+        {
+            "question": "Have you had any problems with your stomach before?",
+            "originalResponse": "No, I havent had any problems with my stomach before.",
+            "display": true,
+            "qNum": "51"
+        },
+        {
+            "question": "Thats good.",
+            "originalResponse": "Yeah it is.",
+            "display": true,
+            "qNum": "52"
+        },
+        {
+            "question": "Does anything make the pain better?",
+            "originalResponse": "Hmm well I dont really have any pain, so there isnt anything needed to make the pain better.",
+            "display": true,
+            "qNum": "53"
+        },
+        {
+            "question": "When did this start?",
+            "originalResponse": "Erh, Im not sure when it started actually.",
+            "display": true,
+            "qNum": "54"
+        },
+        {
+            "question": "Nice to meet you.",
+            "originalResponse": "Nice to meet you too.",
+            "display": true,
+            "qNum": "55"
+        },
+        {
+            "question": "Do you have any children?",
+            "originalResponse": "No, none yet.",
+            "display": true,
+            "qNum": "56"
+        },
+        {
+            "question": "Has this happened before?",
+            "originalResponse": "No, this is the first time anything like this has happened.",
+            "display": true,
+            "qNum": "57"
+        },
+        {
+            "question": "Have you noticed any yellowing of your skin?",
+            "originalResponse": "My skin looks normal I think. Definitely not yellow.",
+            "display": true,
+            "qNum": "58"
+        },
+        {
+            "question": "Have you had any pain when swallowing?",
+            "originalResponse": "No I havent had any pain when swallowing.",
+            "display": true,
+            "qNum": "59"
+        },
+        {
+            "question": "Have you had any problems swallowing?",
+            "originalResponse": "No I havent had any problems swallowing.",
+            "display": true,
+            "qNum": "60"
+        },
+        {
+            "question": "Can you tell me more about that?",
+            "originalResponse": "No not really.",
+            "display": true,
+            "qNum": "61"
+        },
+        {
+            "question": "We will do our best.",
+            "originalResponse": "Thank you",
+            "display": true,
+            "qNum": "62"
+        },
+        {
+            "question": "Is there anything that you are worried about?",
+            "originalResponse": "No, Im not worried Dr [playerSurname], just want to go home when I can.",
+            "display": true,
+            "qNum": "63"
+        },
+        {
+            "question": "Any recent travel?",
+            "originalResponse": "No, I havent left pixel island for about 4 years now.",
+            "display": true,
+            "qNum": "64"
+        },
+        {
+            "question": "How much alcohol do you drink?",
+            "originalResponse": "I dont drink any alcohol.",
+            "display": true,
+            "qNum": "65"
+        },
+        {
+            "question": "Do you drink alcohol?",
+            "originalResponse": "No, I dont drink any alcohol.",
+            "display": true,
+            "qNum": "66"
+        },
+        {
+            "question": "How much do you smoke?",
+            "originalResponse": "I dont smoke.",
+            "display": true,
+            "qNum": "67"
+        },
+        {
+            "question": "Do you smoke?",
+            "originalResponse": "No, I dont smoke.",
+            "display": true,
+            "qNum": "68"
+        },
+        {
+            "question": "What do you do for a living?",
+            "originalResponse": "I am a [patientJob].",
+            "display": true,
+            "qNum": "69"
+        },
+        {
+            "question": "Does your house have stairs?",
+            "originalResponse": "Yes, its a two storey house. But I can manage that fine if that is what you were getting at.",
+            "display": true,
+            "qNum": "70"
+        },
+        {
+            "question": "What is you living situation?",
+            "originalResponse": "I live on my own in a house. Its not too far away from here.",
+            "display": true,
+            "qNum": "71"
+        },
+        {
+            "question": "Do you have any family history of any medical conditions?",
+            "originalResponse": "No, all my family is very healthy. There is certainly no medical conditions that run in the family.",
+            "display": true,
+            "qNum": "72"
+        },
+        {
+            "question": "Do you take any recreational drugs?",
+            "originalResponse": "No, I certainly do not.",
+            "display": true,
+            "qNum": "73"
+        },
+        {
+            "question": "Do you take any medications?",
+            "originalResponse": "No, I am not on any medication.",
+            "display": true,
+            "qNum": "74"
+        },
+        {
+            "question": "Im sorry to hear that.",
+            "originalResponse": "Thats okay.",
+            "display": false,
+            "qNum": "75"
+        },
+        {
+            "question": "Have you had any tremors?",
+            "originalResponse": "No, I havent noticed anything like that.",
+            "display": true,
+            "qNum": "76"
+        },
+        {
+            "question": "Do you have any memory loss?",
+            "originalResponse": "No, my memory is completely fine.",
+            "display": true,
+            "qNum": "77"
+        },
+        {
+            "question": "Do you have any back pain?",
+            "originalResponse": "No, I dont have any back pain.",
+            "display": true,
+            "qNum": "78"
+        },
+        {
+            "question": "Do you suffer with panic attacks?",
+            "originalResponse": "No, Im a very relaxed person to be honest.",
+            "display": true,
+            "qNum": "79"
+        },
+        {
+            "question": "Have you got arthritis?",
+            "originalResponse": "No, Ive never been diagnosed with arthritis.",
+            "display": true,
+            "qNum": "80"
+        },
+        {
+            "question": "Have you been getting any cramps?",
+            "originalResponse": "No, I havent had any cramps.",
+            "display": true,
+            "qNum": "81"
+        },
+        {
+            "question": "Have you ever been anaemic?",
+            "originalResponse": "No, as far as Im aware, Ive never been anaemic.",
+            "display": true,
+            "qNum": "82"
+        },
+        {
+            "question": "What does your stool look like?",
+            "originalResponse": "It looks normal to be honest with you. I havent noticed any changes.",
+            "display": true,
+            "qNum": "83"
+        },
+        {
+            "question": "Is there any blood in your stool?",
+            "originalResponse": "No, there is no blood in the stool.",
+            "display": true,
+            "qNum": "84"
+        },
+        {
+            "question": "Is there anything in your stool?",
+            "originalResponse": "No, my stool looks normal.",
+            "display": true,
+            "qNum": "85"
+        },
+        {
+            "question": "Have you noticed any bleeding?",
+            "originalResponse": "No, I havent had any bleeding from anywhere. Id definitely have noticed.",
+            "display": true,
+            "qNum": "86"
+        },
+        {
+            "question": "Have you lost your appetite?",
+            "originalResponse": "Nope, my appetite is completely normal.",
+            "display": true,
+            "qNum": "87"
+        },
+        {
+            "question": "Have you ever had a myocardial infarction?",
+            "originalResponse": "Im sorry Dr [playerSurname], I have no idea what that is.",
+            "display": true,
+            "qNum": "88"
+        },
+        {
+            "question": "Do you have a sore throat?",
+            "originalResponse": "No, my throat is completely fine.",
+            "display": true,
+            "qNum": "89"
+        },
+        {
+            "question": "Do you suffer from migraines?",
+            "originalResponse": "No, I dont suffer from anything like that.",
+            "display": true,
+            "qNum": "90"
+        },
+        {
+            "question": "Have you ever had this before?",
+            "originalResponse": "No, Ive never had anything like this before.",
+            "display": true,
+            "qNum": "91"
+        },
+        {
+            "question": "Have you ever had a heart attack?",
+            "originalResponse": "Oh my goodness no. Thank goodness.",
+            "display": true,
+            "qNum": "92"
+        },
+        {
+            "question": "Do you feel bloated?",
+            "originalResponse": "No, Ive not had any problems with bloating.",
+            "display": true,
+            "qNum": "93"
+        },
+        {
+            "question": "Have you had any hair loss?",
+            "originalResponse": "No, I havent lost any hair. Certainly not that Ive noticed.",
+            "display": true,
+            "qNum": "94"
+        },
+        {
+            "question": "Do you have high blood pressure?",
+            "originalResponse": "No, it has always been fine when the doctor takes it.",
+            "display": true,
+            "qNum": "95"
+        },
+        {
+            "question": "Do you have hypertension?",
+            "originalResponse": "What is hypertension?",
+            "display": true,
+            "qNum": "96"
+        },
+        {
+            "question": "Are you afraid of anybody at home?",
+            "originalResponse": "Why would I be afraid. No, theres nothing to worry about doctors.",
+            "display": true,
+            "qNum": "97"
+        },
+        {
+            "question": "Do you have any pain in your muscles?",
+            "originalResponse": "No, my muscles feel fine.",
+            "display": true,
+            "qNum": "98"
+        },
+        {
+            "question": "Have you had any loss of sensation?",
+            "originalResponse": "Nope, I can feel everything. Nothing to worry about there.",
+            "display": true,
+            "qNum": "99"
+        },
+        {
+            "question": "Do you have any pain in your joints?",
+            "originalResponse": "Nope, all my joints are working fine thanks.",
+            "display": true,
+            "qNum": "100"
+        },
+        {
+            "question": "Do you feel confused?",
+            "originalResponse": "What do you mean confused? I am not at all confused.",
+            "display": true,
+            "qNum": "101"
+        },
+        {
+            "question": "Do you have any numbness?",
+            "originalResponse": "Nope, I dont feel numb at all.",
+            "display": true,
+            "qNum": "102"
+        },
+        {
+            "question": "Do you have any allergies?",
+            "originalResponse": "Nope, I dont have any allergies to anything. Not that I know of anyway.",
+            "display": true,
+            "qNum": "103"
+        },
+        {
+            "question": "Are you itchy?",
+            "originalResponse": "No, Im not itchy at all.",
+            "display": true,
+            "qNum": "104"
+        },
+        {
+            "question": "Do you feel irritable?",
+            "originalResponse": "No, Im not irritable. Im really rather friendly.",
+            "display": true,
+            "qNum": "105"
+        },
+        {
+            "question": "Are you stressed?",
+            "originalResponse": "No, Im not stressed. Im quite a relaxed person if Im honest.",
+            "display": true,
+            "qNum": "106"
+        },
+        {
+            "question": "Have you been constipated?",
+            "originalResponse": "No, Ive been going to the toilet regularly.",
+            "display": true,
+            "qNum": "107"
+        },
+        {
+            "question": "Do you have a rash?",
+            "originalResponse": "No, I havent noticed any rash anywhere.",
+            "display": true,
+            "qNum": "108"
+        },
+        {
+            "question": "Youre a cunt.",
+            "originalResponse": "Do you speak to your mother with that mouth?",
+            "display": false,
+            "qNum": "109"
+        },
+        {
+            "question": "Fuck off",
+            "originalResponse": "What did you just say to me?",
+            "display": false,
+            "qNum": "110"
+        },
+        {
+            "question": "Have you had any weight loss?",
+            "originalResponse": "Chance would be a fine thing. No, Ive lost none.",
+            "display": true,
+            "qNum": "111"
+        },
+        {
+            "question": "Have you felt dizzy?",
+            "originalResponse": "No, I havent had any dizziness.",
+            "display": true,
+            "qNum": "112"
+        },
+        {
+            "question": "Are you short of breath?",
+            "originalResponse": "No, my breathing is completely fine.",
+            "display": true,
+            "qNum": "113"
+        },
+        {
+            "question": "Do you have a fever?",
+            "originalResponse": "No, I havent had a fever.",
+            "display": true,
+            "qNum": "114"
+        },
+        {
+            "question": "Do you feel nauseous?",
+            "originalResponse": "No, I havent had any nausea at all.",
+            "display": true,
+            "qNum": "115"
+        },
+        {
+            "question": "Do you feel anxious?",
+            "originalResponse": "No, Im definitely not anxious.",
+            "display": true,
+            "qNum": "116"
+        },
+        {
+            "question": "Do you feel depressed?",
+            "originalResponse": "No, I dont feel depressed at all.",
+            "display": true,
+            "qNum": "117"
+        },
+        {
+            "question": "Did you have symptoms before the headache?",
+            "originalResponse": "I havent got a headache doctor?",
+            "display": true,
+            "qNum": "118"
+        },
+        {
+            "question": "Do you have a headache?",
+            "originalResponse": "No, I dont have a headache.",
+            "display": true,
+            "qNum": "119"
+        },
+        {
+            "question": "Do you feel tired?",
+            "originalResponse": "No I havent been feeling tired at all.",
+            "display": true,
+            "qNum": "120"
+        },
+        {
+            "question": "Have you had any diarrhoea?",
+            "originalResponse": "No, Ive been going to the toilet normally.",
+            "display": true,
+            "qNum": "121"
+        },
+        {
+            "question": "Have you vomited?",
+            "originalResponse": "No, I havent vomited at all.",
+            "display": true,
+            "qNum": "122"
+        },
+        {
+            "question": "Whats you name?",
+            "originalResponse": "[patientName]",
+            "display": true,
+            "qNum": "123"
+        },
+        {
+            "question": "Have you ever had any surgery?",
+            "originalResponse": "No, Ive never had to have any surgery.",
+            "display": true,
+            "qNum": "124"
+        },
+        {
+            "question": "Have you had any other symptoms?",
+            "originalResponse": "No I havent had any other symptoms.",
+            "display": true,
+            "qNum": "125"
+        },
+        {
+            "question": "How severe is the pain?",
+            "originalResponse": "I dont have any pain. So, erm, not bad at all?",
+            "display": true,
+            "qNum": "126"
+        },
+        {
+            "question": "Is the pain continuous or intermittent?",
+            "originalResponse": "No I havent had any pain so its not going to come and go.",
+            "display": true,
+            "qNum": "127"
+        },
+        {
+            "question": "Does the pain radiate anywhere?",
+            "originalResponse": "No, I have no pain, so its not going to radiate anywhere?",
+            "display": true,
+            "qNum": "128"
+        },
+        {
+            "question": "How long have you had the pain?",
+            "originalResponse": "I havent had any pain so far.",
+            "display": true,
+            "qNum": "129"
+        },
+        {
+            "question": "Where is the pain?",
+            "originalResponse": "What do you mean? I dont have any pain.",
+            "display": true,
+            "qNum": "130"
+        },
+        {
+            "question": "What is the pain like?",
+            "originalResponse": "I dont have any pain Dr [playerSurname]",
+            "display": true,
+            "qNum": "131"
+        },
+        {
+            "question": "When was your date of birth?",
+            "originalResponse": "[patientDOB]",
+            "display": false,
+            "qNum": "132"
+        },
+        {
+            "question": "How old are you?",
+            "originalResponse": "I am [patientAge] years old.",
+            "display": true,
+            "qNum": "133"
+        },
+        {
+            "question": "Do you have any past medical conditions?",
+            "originalResponse": "No, Im very healthy. I barely ever have to see my doctor.",
+            "display": true,
+            "qNum": "134"
+        },
+        {
+            "question": "Where is the stomach pain?",
+            "originalResponse": "What do you mean where is my stomach pain? I dont have any.",
+            "display": true,
+            "qNum": "135"
+        },
+        {
+            "question": "Do you have any pain in your stomach?",
+            "originalResponse": "No, theres no pain in my stomach.",
+            "display": true,
+            "qNum": "136"
+        },
+        {
+            "question": "Do you have any pain in your abdomen?",
+            "originalResponse": "Sorry, what do you mean by my abdomen?",
+            "display": true,
+            "qNum": "137"
+        },
+        {
+            "question": "Do you have any pain?",
+            "originalResponse": "No Im not in any pain at all.",
+            "display": true,
+            "qNum": "138"
+        },
+        {
+            "question": "Do you have any chest pain?",
+            "originalResponse": "No Im fine actually. No pain in my chest.",
+            "display": true,
+            "qNum": "139"
+        },
+        {
+            "question": "How is your breathing?",
+            "originalResponse": "Its fine, I havent had any problems with it.",
+            "display": true,
+            "qNum": "140"
+        },
+        {
+            "question": "Are you coughing up any blood?",
+            "originalResponse": "No, Im not coughing up any blood.",
+            "display": true,
+            "qNum": "141"
+        },
+        {
+            "question": "What colour is the sputum?",
+            "originalResponse": "I dont have any sputum.",
+            "display": true,
+            "qNum": "142"
+        },
+        {
+            "question": "Is the cough productive?",
+            "originalResponse": "No doc, I dont have any sputum.",
+            "display": true,
+            "qNum": "143"
+        },
+        {
+            "question": "Do you have a cough?",
+            "originalResponse": "Nope I havent got a cough.",
+            "display": true,
+            "qNum": "144"
+        },
+        {
+            "question": "Hey",
+            "originalResponse": "Hey is a bit informal isnt it? How old are you? Are you sure youre a doctor?",
+            "display": true,
+            "qNum": "145"
+        },
+        {
+            "question": "Hi",
+            "originalResponse": "Hi Doctor.",
+            "display": false,
+            "qNum": "146"
+        }
+    ],
+    "templates": [
+        {
+            "name": "SOCRATES",
+            "questions": [
+                1,
+                53,
+                126,
+                127,
+                128,
+                129,
+                130,
+                131
+            ],
+            "included": {
+                "correct": [
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true
+                ],
+                "edit": [
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true,
+                    true
+                ]
+            }
+        },
+        {
+            "name": "Neurological",
+            "questions": [
+                2,
+                4,
+                6
+            ],
+            "included": {
+                "correct": [
+                    true,
+                    true,
+                    true
+                ],
+                "edit": [
+                    true,
+                    true,
+                    true
+                ]
+            }
+        }
+    ]
+}

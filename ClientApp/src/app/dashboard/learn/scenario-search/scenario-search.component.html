@@ -1,0 +1,71 @@
+<nb-card size="large">
+  <nb-card-header>
+    <span class="title">Find a scenario</span>
+    <nb-tabset>
+      <nb-tab tabTitle="Simple"></nb-tab>
+      <nb-card-body>This is the tes</nb-card-body>
+      <nb-tab tabTitle="Advanced"></nb-tab>
+    </nb-tabset>
+  </nb-card-header>
+  <nb-card-body>
+    <div class="scenario-name input-group">
+      <input type="text" placeholder="Scenario Name" class="form-control" />
+    </div>
+    <div class="input-group dropdown" ngbDropdown>
+      <button class="btn btn-outline-primary" type="button" ngbDropdownToggle>
+        {{ currentSpecialty }}
+      </button>
+      <ul ngbDropdownMenu class="dropdown-menu">
+        <li class="dropdown-item" *ngFor="let specialty of specialties" (click)="changePeriod(period)">
+          {{ specialty }}
+        </li>
+      </ul>
+    </div>
+    <div class="input-group dropdown" ngbDropdown>
+      <button class="btn btn-outline-primary" type="button" ngbDropdownToggle>
+        {{ currentModule }}
+      </button>
+      <ul ngbDropdownMenu class="dropdown-menu">
+        <li class="dropdown-item" *ngFor="let module of modules" (click)="changePeriod(period)">
+          {{ module }}
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="dropdown input-group" ngbDropdown>
+          <button class="btn btn-outline-primary" type="button" ngbDropdownToggle>
+            {{ currentDifficulty }}
+          </button>
+          <ul ngbDropdownMenu class="dropdown-menu" margin="1rem">
+            <li class="dropdown-item" *ngFor="let difficulty of difficulties" (click)="changePeriod(period)">
+              {{ difficulty }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="divider col-sm-"></div> -->
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="dropdown input-group" ngbDropdown>
+          <button class="btn btn-outline-primary" type="button" ngbDropdownToggle>
+            {{ currentRating }}
+          </button>
+          <ul ngbDropdownMenu class="dropdown-menu">
+            <li class="dropdown-item" *ngFor="let rating of ratings" (click)="changePeriod(period)">
+              {{ rating }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="scenario-name input-group">
+      <input type="text" placeholder="Creator" class="form-control" />
+    </div>
+
+    <div class="bottom-buttons">
+      <button nbButton class="btn btn-primary">Clear</button>
+      <div class="padding"></div>
+      <button nbButton class="btn btn-success">Search</button>
+    </div>
+  </nb-card-body>
+</nb-card>

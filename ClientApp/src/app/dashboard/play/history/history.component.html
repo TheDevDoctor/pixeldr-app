@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-xl-1 col-lg-0 col-md-0">
+  </div>
+  <div class="col-xl-6 col-lg-8 col-md-7 col-sm-12">
+    <nb-chat title="History Bot" size="large" status="primary" [nbSpinner]="loading" nbSpinnerStatus="primary">
+      <nb-chat-message *ngFor="let msg of messages" [type]="msg.type" [message]="msg.text" [reply]="msg.reply" [sender]="msg.user.name"
+        [date]="msg.date" [files]="msg.files" [quote]="msg.quote" [latitude]="msg.latitude" [longitude]="msg.longitude"
+        [avatar]="msg.user.avatar">
+      </nb-chat-message>
+
+      <nb-chat-form (send)="sendMessage($event)" [dropFiles]="true">
+      </nb-chat-form>
+    </nb-chat>
+  </div>
+  <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
+    <ngx-history-settings></ngx-history-settings>
+  </div>
+  <div class="col-xl-1 col-lg-1 col-md-0">
+  </div>
+</div>

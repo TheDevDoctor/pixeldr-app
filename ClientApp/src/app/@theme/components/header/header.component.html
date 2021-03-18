@@ -1,0 +1,29 @@
+<div class="header-container"
+     [class.left]="position === 'normal'"
+     [class.right]="position === 'inverse'">
+  <div class="logo-container">
+    <a *ngIf="!globals.playing && !globals.building" (click)="toggleSidebar()" href="#" class="navigation"><i class="nb-menu"></i></a>
+    <a *ngIf="globals.playing || globals.building" [routerLink]="['/dashboard/overview']" (click)="exitPlayOrBuild()" href="#" class="navigation"><i class="nb-arrow-left"></i></a>
+    <div class="logo" (click)="goToHome()"><img src="
+      assets/images/logos/pixeldr-white.png" alt="PixelDr" /></div>
+  </div>
+</div>
+
+<nb-actions
+  size="medium"
+  class="header-container"
+  [class.right]="position === 'normal'"
+  [class.left]="position === 'inverse'">
+  <!--Commenting out settings panel for now-->
+  <!--<nb-action icon="nb-gear" class="toggle-layout" (click)="toggleSettings()"></nb-action>-->
+  <nb-action icon="nb-list" class="toggle-layout" (click)="toggleSettings()"></nb-action>
+  <nb-action *nbIsGranted="['view', 'user']">
+    <nb-user [nbContextMenu]="userMenu" [name]="user?.signinname" [picture]="userPicture" nbContextMenuTag="userMenu"></nb-user>
+  </nb-action>
+  <nb-action class="control-item" disabled icon="nb-notifications"></nb-action>
+  <nb-action class="control-item" icon="nb-email"></nb-action>
+  <!--Commenting out search function for now-->
+  <nb-action class="control-item">
+    <nb-search type="rotate-layout" (click)="startSearch()"></nb-search>
+  </nb-action>
+</nb-actions>

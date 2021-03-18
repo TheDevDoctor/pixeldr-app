@@ -1,0 +1,133 @@
+<div class="row">
+  <div class="col-xxl-12">
+    <nb-card size="large">
+      <!-- <nb-card-header>Discussion boards</nb-card-header>
+      <nb-card-body> -->
+      <div class="consumption-table">
+        <nb-card-header><span class="header-text">Discussion Boards</span><span><input class="search" type="text"
+              nbInput fieldSize="small" placeholder="Search..."></span></nb-card-header>
+        <nb-card-body [nbSpinner]="loading" nbSpinnerStatus="primary" nbSpinnerSize="xxlarge">
+          <nb-list *ngIf="discussions !== undefined">
+            <nb-list-item *ngFor="let discussion of discussions; let i = index" [ngClass]="selectedIndex === i ? 'selected': ''"
+              (click)="discussionSelected(i)">
+              <!-- <div class="green-bar"></div> -->
+              {{ discussion.title }}
+            </nb-list-item>
+          </nb-list>
+        </nb-card-body>
+        <nb-card-footer *ngIf="!posting">
+          <button nbButton hero status="success" size="small" (click)="newPostPressed()">
+            <i class="nb-plus-circled left"></i>
+            <span>New Post</span>
+          </button>
+        </nb-card-footer>
+      </div>
+      <div [ngClass]="{ 'right-bg': true, 'post': !posting, 'posting': posting }">
+        <ng-container *ngIf="!posting else newPost">
+          <ng-container *ngIf="selectedDiscussion !== undefined">
+            <div class="post-div">
+              <h4 class="text-hint">{{ selectedDiscussion.title }}</h4>
+              <p>{{ selectedDiscussion.post }}</p>
+              <div class="userAndButtons">
+                <nb-user [name]="selectedDiscussion.username" title="{{ selectedDiscussion?.dateTimePosted | date:'medium' }}"
+                  size="medium">
+                </nb-user>
+                <span style="padding: 0.2rem 0;">
+                  <button class="responseButton" (click)="newCommentPressed()">
+                    <span class="icon-span">
+                      <i class="fa fa-reply"></i>
+                    </span>
+                    <span class="btn-text">
+                      Reply
+                    </span>
+                  </button>
+                  <button class="responseButton" (click)="newCommentPressed()">
+                    <span class="icon-span">
+                      <i class="fa fa-quote-right"></i>
+                    </span>
+                    <span class="btn-text">
+                      Quote
+                    </span>
+                  </button>
+                  <button class="responseButton" (click)="newCommentPressed()">
+                    <span class="icon-span">
+                      <i class="fa fa-exclamation"></i>
+                    </span>
+                    <span class="btn-text">
+                      Report
+                    </span>
+                  </button>
+                </span>
+              </div>
+            </div>
+
+            <div class="comments-div">
+              <div *ngFor="let comment of selectedDiscussion?.comments" class="comment-cont">
+                <div class="userAndButtons small">
+                  <nb-user [name]="comment.username" title="{{ comment.timestamp | date:'medium' }}" size="small"></nb-user>
+                  <span class="comment-buttons" style="padding: 0.2rem 0;">
+                    <button class="responseButton small" (click)="newCommentPressed()">
+                      <span class="icon-span small">
+                        <i class="fa fa-reply small"></i>
+                      </span>
+                    </button>
+                    <button class="responseButton small" (click)="newCommentPressed(comment)">
+                      <span class="icon-span small">
+                        <i class="fa fa-quote-right small"></i>
+                      </span>
+                    </button>
+                    <button class="responseButton small" (click)="newCommentPressed()">
+                      <span class="icon-span small">
+                        <i class="fa fa-exclamation small"></i>
+                      </span>
+                    </button>
+                  </span>
+                </div>
+                <div *ngIf="comment.quote" class="quote-div">"{{ comment.quote }}"</div>
+                <p>{{ comment.comment }}</p>
+                <hr>
+
+              </div>
+            </div>
+
+            <div class="commenting" *ngIf="commenting" [nbSpinner]="sendingComment" nbSpinnerStatus="primary"
+              nbSpinnerMessage="Sending...">
+              <div class="quote" *ngIf="quote">" {{ quote }} "</div>
+              <div class="commentDiv">
+                <textarea [(ngModel)]="commentText" nbInput fullWidth placeholder="Comment"></textarea>
+                <button class="responseButton" (click)="sendNewComment()">
+                  <span class="icon-span">
+                    <i class="fa fa-reply"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </nb-card>
+  </div>
+</div>
+
+<ng-template #newPost>
+  <div class="new-post-header">
+    <h3>New Post:</h3>
+    <i class="nb-arrow-left" (click)="closeNewPost()"></i>
+  </div>
+  <div class="input-container">
+    <input [(ngModel)]="newPostTitle" type="text" nbInput fullWidth placeholder="Title new">
+    <textarea [(ngModel)]="newPostDesc" nbInput fullWidth placeholder="Description"></textarea>
+    <input type="text" disabled nbInput fullWidth placeholder="Tags: Coming soon">
+    <button nbButton hero status="info" size="small" id="postButton" (click)="sendNewDiscussion()" [nbSpinner]="sendingPost"
+      nbSpinnerStatus="info" nbSpinnerSize="xsmall" nbSpinnerMessage="">
+      <span>Post</span>
+      <i class="nb-arrow-thin-right right"></i>
+    </button>
+  </div>
+</ng-template>
+
+<!-- <ng-template #commenting>
+  <div>
+    this is a commenting div
+  </div>
+</ng-template> -->

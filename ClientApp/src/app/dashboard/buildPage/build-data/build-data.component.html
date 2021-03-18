@@ -1,0 +1,32 @@
+<nb-card size="medium">
+  <nb-card-header>
+    <div class="cameras-card-header">
+      <span class="cameras-card-title">Build Data</span>
+      <span class="cameras-filter">
+        <a [class.active]="isSingleView" (click)="isSingleView = true">
+          <i class="nb-square"></i>
+        </a>
+        <a [class.active]="!isSingleView" (click)="isSingleView = false">
+          <i class="nb-grid-a"></i>
+        </a>
+      </span>
+    </div>
+  </nb-card-header>
+  <nb-card-body>
+    <div class="cameras">
+      <div class="camera col-sm-6" (click)="selectCamera()">
+        <!-- <span>1</span> -->
+        <i class="icon ion-ios-pie"></i>
+      </div>
+      <div class="camera col-sm-6" (click)="selectCamera()">
+        <i class="icon nb-bar-chart"></i>
+      </div>
+      <div class="camera col-sm-6" (click)="selectCamera()">
+        <i class="icon ion-ios-flask"></i>
+      </div>
+      <div class="camera col-sm-6" (click)="selectCamera()">
+        <i class="icon ion-ios-checkmark-circle-outline"></i>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

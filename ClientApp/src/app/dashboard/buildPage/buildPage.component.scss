@@ -1,0 +1,17 @@
+@import '../../@theme/styles/themes';
+
+@include nb-install-component() {
+    nb-card-body.buttons-card {
+        display: flex;
+
+        button {
+            flex: 1 1 auto;
+            font-size: 1.5rem;
+        }
+
+        .seperator {
+            width: 5%;
+            display: inline-block;
+        }
+    }
+}

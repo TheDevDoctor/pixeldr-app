@@ -1,0 +1,140 @@
+<div class="row">
+  <div class="col-lg-8">
+    <nb-flip-card [showToggleButton]="false" [flipped]="flipped">
+      <nb-card-front>
+        <nb-card size="large">
+          <nb-card-header>Leaderboards</nb-card-header>
+          <nb-card-body class="list-view" [nbSpinner]="loading" nbSpinnerStatus="primary" nbSpinnerSize="xxlarge">
+            <nb-list *ngIf="top100 !== undefined">
+              <nb-list-item *ngFor="let user of top100; let i = index" (click)="playerSelected(user)">
+                <span class="number-count text-hint">
+                  {{ i + 1 }}
+                </span>
+                <nb-user class="list-view" [name]="user.username" [title]="user.ranking.rank" size="large">
+                </nb-user>
+                <span class="progress-div">
+                  <nb-progress-bar [value]="(user.ranking.xp/this.highestXP) * 100" status="info" [displayValue]="false">primary</nb-progress-bar>
+                  <p class="progress-text">XP: <span class="xp">{{ user.ranking.xp }}</span></p>
+                </span>
+                <div class="badge-div">
+                  <img [src]="returnBadge(user.ranking.rank)">
+                </div>​
+              </nb-list-item>
+            </nb-list>
+          </nb-card-body>
+        </nb-card>
+      </nb-card-front>
+      <nb-card-back>
+        <nb-card class="back" size="large">
+          <i class="nb-arrow-right" (click)="toggleView()"></i>
+          <div class="consumption-table">
+            <div class="profile-header">
+              <div class="interactButtons">
+                <button nbButton class="button add" status="success">
+                  <i class="icon ion-md-person-add"></i>
+                </button>
+                <button nbButton class="button chat" status="warning">
+                  <i class="icon ion-md-chatboxes"></i>
+                </button>
+                <button nbButton class="button subscribe" status="danger">
+                  <i class="icon ion-md-at"></i>
+                </button>
+              </div>
+              <div class="username-rank">
+                <h1 class="username">{{ selectedPlayer?.username }}</h1>
+                <h3 class="rank">{{ selectedPlayer?.ranking.rank }}</h3>
+              </div>
+            </div>
+            <div class="hor-list-container" style="margin-top: 0;">
+              <h5 style="margin-left: 2rem;">Awards:</h5>
+              <div class="horizontal-list">
+                <img src="assets/images/badges/PD_Foundation_2.png" class="list-badge">
+                <img src="assets/images/badges/PD_Foundation_2.png" class="list-badge">
+                <img src="assets/images/badges/PD_Foundation_2.png" class="list-badge">
+                <img src="assets/images/badges/PD_Foundation_2.png" class="list-badge">
+                <img src="assets/images/badges/PD_Foundation_2.png" class="list-badge">
+                <img src="assets/images/badges/PD_Foundation_2.png" class="list-badge">
+                <img src="assets/images/badges/PD_Foundation_2.png" class="list-badge">
+                <img src="assets/images/badges/PD_Foundation_2.png" class="list-badge">
+              </div>
+            </div>
+            <div class="hor-list-container">
+              <h5 style="margin-left: 2rem;">Builds:</h5>
+              <div class="horizontal-list">
+                <nb-card class="scenario-card-mini" *ngFor="let build of selectedPlayer?.builds">
+                  <div class="scenario-bg" [style.background-image]="'url(assets/images/scenarios/' + build.image + '.png)'">
+                    <span>{{ build.name }}</span>
+                  </div>
+                </nb-card>
+              </div>
+            </div>
+            <div class="hor-list-container">
+              <h5 style="margin-left: 2rem;">Favourites:</h5>
+              <div class="horizontal-list">
+                <nb-card class="scenario-card-mini" *ngFor="let fav of selectedPlayer?.favourites">
+                  <div class="scenario-bg" [style.background-image]="'url(assets/images/scenarios/' + fav.image + '.png)'">
+                    <span>{{ fav.name }}</span>
+                  </div>
+                </nb-card>
+              </div>
+            </div>
+          </div>
+          <div class="chart-container">
+            <div style="display: flex;">
+              <div class="circ-container">
+                <div class="avatar-container">
+                  <img src="assets/images/avatars/female-doc-1.png" class="avatar">
+                </div>
+                <div class="hover-xp">
+                  <span class="hover-title large">XP:</span>
+                  <span class="hover-value larger">{{ selectedPlayer?.ranking.xp }}</span>
+                  <span class="hover-title">Promotion in:</span>
+                  <span class="hover-value">{{ selectedPlayer?.ranking.xpTilNext }}</span>
+                </div>
+              </div>
+            </div>​
+            <!-- <div style="display: flex;">
+              <div class="circ-container" style="z-index: 10; back"></div>
+            </div>​ -->
+            <div class="col circ-progress-container">
+              <ngx-percentage-chart [chartValue]="this.circPercent" [showLabel]="false" [blurSize]="15" [blurColor]="'#0088ff'"
+                [color]="'#0088ff'"></ngx-percentage-chart>
+            </div>
+            <div class="rank">
+              <span style="margin-top: 2.5rem;" class="text-hint">Rank:</span>
+              <span style="margin-right: auto; margin-left: 2.5rem;">
+                <img style="height: 86px;" [src]="returnBadge(selectedPlayer?.ranking.rank)">
+              </span>
+            </div>
+            <div class="stats upper">
+              <div class="parameter">
+                <span class="parameter-name">Scenarios<br />played</span>
+                <span class="parameter-value">12</span>
+                <span class="parameter-name margin-top">History</span>
+                <span class="parameter-value">97%</span>
+              </div>
+              <div class="parameter">
+                <span class="parameter-name">Scenarios<br />built</span>
+                <span class="parameter-value">6</span>
+                <span class="parameter-name margin-top">Investigations</span>
+                <span class="parameter-value">n/a</span>
+              </div>
+              <div class="parameter">
+                <span class="parameter-name">World<br />ranking</span>
+                <span class="parameter-value">1st</span>
+                <span class="parameter-name margin-top">Management</span>
+                <span class="parameter-value">n/a</span>
+              </div>
+            </div>
+            <div class="member-since">
+              <p class="text-hint"><span>member since:</span><br />{{ selectedPlayer?.joined }}</p>
+            </div>
+          </div>
+        </nb-card>
+      </nb-card-back>
+    </nb-flip-card>
+  </div>
+  <div class="col-lg-4">
+    <ngx-profile-card></ngx-profile-card>
+  </div>
+</div>

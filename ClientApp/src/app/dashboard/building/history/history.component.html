@@ -1,0 +1,94 @@
+<div class="row">
+  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+    <nb-flip-card>
+      <nb-card-front>
+        <nb-card size="large">
+          <nb-chat title="History Bot" size="large" status="primary" [nbSpinner]="loading" nbSpinnerStatus="primary">
+            <nb-chat-message *ngFor="let msg of messages" [type]="msg.type" [message]="msg.text" [reply]="msg.reply"
+              [sender]="msg.user.name" [date]="msg.date" [files]="msg.files" [quote]="msg.quote" [latitude]="msg.latitude"
+              [longitude]="msg.longitude" [avatar]="msg.user.avatar" [nbPopover]="PopoverTemplate" nbPopoverMode="hover"
+              [nbPopoverContext]="{text: 'Example context', data: msg}">
+            </nb-chat-message>
+            <nb-chat-form (send)="sendMessage($event)" [dropFiles]="true">
+            </nb-chat-form>
+          </nb-chat>
+        </nb-card>
+      </nb-card-front>
+      <nb-card-back>
+        <nb-card size="large">
+          <nb-card-header>
+            <span>Search</span>
+            <div class="checkbox-container">
+              <div [(ngModel)]="viewModel" (ngModelChange)="searchTabPressed($event)" ngbRadioGroup class="btn-group btn-group-toggle btn-outline-toggle-group btn-group-full-width btn-toggle-radio-group">
+                <label ngbButtonLabel class="btn btn-outline-primary">
+                  <input ngbButton type="radio" value="templates"> Templates
+                </label>
+                <label ngbButtonLabel class="btn btn-outline-primary">
+                  <input ngbButton type="radio" value="questions"> Questions
+                </label>
+              </div>
+            </div>
+          </nb-card-header>
+          <nb-card-body class="template-card">
+            <div class="summary-container">
+              <input type="text" nbInput fullWidth fieldSize="medium" placeholder="Search...">
+            </div>
+            <div class="overflow-area">
+              <nb-list *ngIf="viewModel == 'templates'">
+                <nb-list-item *ngFor="let template of searchTemplates; let i = index">
+                  <div class="template-container">
+                    <div class="top-bar">
+                      <div style="display: inline-block;">
+                        <span>
+                          <h4 style="display: inline-block; position: relative; top: 3px;">{{ template.name }}</h4>
+                        </span>
+                        <i #dropdownIcon class="nb-arrow-right" (click)="templateQsDropdown(i)"></i>
+                      </div>
+                      <button nbButton status='primary' class='q-button correct template-add' (click)="onTemplateAddButton(template)">Add</button>
+                    </div>
+                    <nb-accordion>
+                      <nb-accordion-item #templateDropdown>
+                        <nb-accordion-item-body>
+                          <div *ngFor="let q of template.questions; let x = index" class="template-q-container">
+                            <nb-checkbox status="warning" [(ngModel)]="template.included.edit[x]"></nb-checkbox>
+                            <nb-checkbox [(ngModel)]="template.included.correct[x]"></nb-checkbox>
+                            <span>{{ searchQuestions[q - 1]?.question }}</span>
+                          </div>
+                        </nb-accordion-item-body>
+                      </nb-accordion-item>
+                    </nb-accordion>
+                  </div>
+                </nb-list-item>
+              </nb-list>
+              <nb-list *ngIf="viewModel == 'questions'">
+                <nb-list-item *ngFor="let question of searchQuestions" [ngStyle]="question.display ? '' : {'display':'none'}">
+                  <div class="q-container">
+                    <h5>{{ question.question }}</h5>
+                    <p class="text-hint">{{ question.originalResponse }}</p>
+                  </div>
+                  <div class="q-buttons">
+                    <button nbButton status='primary' class='q-button edit' (click)="onEditSearchQuestion(question)">Edit</button>
+                    <button nbButton status='primary' class='q-button correct' (click)="onCorrectSearchQuestion(question)">Correct</button>
+                  </div>
+                </nb-list-item>
+              </nb-list>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </nb-card-back>
+    </nb-flip-card>
+  </div>
+  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+    <ngx-adaptation-panel [adaptationsArr]="adaptationsArray" [correctQsArr]="correctQsArray" [adaptations]="adaptations"
+      [correctQs]="correctQs" [(messages)]="messages"></ngx-adaptation-panel>
+  </div>
+</div>
+
+
+<ng-template #PopoverTemplate let-text="text" let-data="data">
+  <nb-card class="popover-card" style="margin: 0.3rem 0.3rem 0.6rem 0.3rem; left: 0px;">
+    <button *ngIf="data.reply == true" nbButton hero size="small" status="success" (click)="correctQuestionPressed(data)">CORRECT</button>
+    <button *ngIf="data.reply == false" nbButton hero size="small" status="warning" (click)="adaptResponsePressed(data)">ADAPT
+      RESPONSE</button>
+  </nb-card>
+</ng-template>

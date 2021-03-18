@@ -1,0 +1,176 @@
+@import '../../../../@theme/styles/themes';
+@import '~@nebular/theme/styles/global/breakpoints';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+@include nb-install-component() {
+
+    .description {
+        padding: 1.25rem 1.25rem 0;
+        font-size: 1.2rem;
+        text-align: justify;
+        color: nb-theme(color-fg-text);
+        font-weight: nb-theme(font-weight-light);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: calc(1rem * 8 * #{nb-theme(line-height)});
+      }
+
+    .camera {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        height: 50%;
+        padding: 0;
+
+        span {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        background: rgba(0, 0, 0, 0.6);
+        font-family: nb-theme(font-secondary);
+        font-weight: nb-theme(font-weight-bolder);
+        font-size: 1.8rem;
+        vertical-align: middle;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+        }
+
+        &::before {
+        background-color: rgba(255, 255, 255, 0.1);
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        }
+
+        &:hover::before {
+        opacity: 0;
+        }
+    }
+
+    .cameras.single-view {
+        height: 40%;
+        width: 100%;
+        .camera {
+        height: 100%;
+        width: 100%;
+
+        &::before {
+            height: 100%;
+        }
+        }
+    }
+
+  nb-card-body {
+    padding: 0;
+    // position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+    height: 100%;
+    width: 100%;
+    
+    nb-card-footer {
+        position: absolute;
+        bottom: 2rem;
+        right: 0rem;
+        display: flex;
+        width: 100%;
+        // justify-content: space-around;
+        padding: 1.3rem 1rem 0.9rem 1.25rem;
+        // display: flex;
+        // border: none;
+        @include nb-rtl(padding-right, 1.25rem);
+        @include nb-rtl(padding-left, 4rem);
+
+        nb-user {
+            position: absolute;
+            right: 1rem;
+            bottom: 0.3rem;
+        }
+
+        span {
+            // position: absolute;
+            vertical-align: center;
+        }
+    }
+    .summary-container {
+        display: flex;
+        flex: 1;
+        background-color: nb-theme(chart-panel-summary-background-color);
+        box-shadow: nb-theme(chart-panel-summary-box-shadow);
+        justify-content: space-between;
+        padding: 1.5rem 4rem 1rem;
+        // margin-bottom: 1rem;
+        position: absolute;
+        bottom: 5.4rem;
+        width:100%;
+        border:
+          nb-theme(chart-panel-summary-border-width)
+          solid
+          nb-theme(chart-panel-summary-border-color);
+        border-left: none;
+        border-right: none;
+      }
+    
+      .value {
+        font-size: 2rem;
+        color: nb-theme(color-fg-heading);
+      }
+    
+      @include media-breakpoint-down(sm) {
+        .value, .title {
+          font-weight: nb-theme(font-weight-bold);
+        }
+    
+        .title {
+          font-size: nb-theme(font-size-sm);
+        }
+    
+        .value {
+          font-size: nb-theme(font-size-xlg);
+        }
+      }
+    
+      @include media-breakpoint-down(is) {
+        .summary-container {
+          padding-left: nb-theme(padding);
+          padding-right: nb-theme(padding);
+        }
+    
+        .value {
+          margin-top: 0.5rem;
+        }
+    }
+
+    .container-btn {
+      float: right;
+      height: 50%;
+
+      .btn {
+        height: 2rem;
+        font-size: 1rem;
+        padding: 0.5rem 0.3rem 1.8rem 0.5rem;
+      }
+    }
+
+    .divider {
+      width: 5px;
+      display: inline-block;
+    }
+    /* stylelint-disable */
+  toaster-container /deep/ {
+    #toast-container .toast-close-button {
+      right: 0;
+    }
+  }
+  /* stylelint-enable */
+
+  @include media-breakpoint-down(xs) {
+    .dropdown-toggle {
+      font-size: 0.75rem;
+    }
+  }
+}

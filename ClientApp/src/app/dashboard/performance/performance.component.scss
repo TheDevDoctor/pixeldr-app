@@ -1,0 +1,71 @@
+@import '../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+  ngx-echarts-pie,
+  ngx-echarts-bar,
+  ngx-echarts-line,
+  ngx-echarts-multiple-xaxis,
+  ngx-echarts-area-stack,
+  ngx-echarts-bar-animation,
+  ngx-echarts-radar {
+    display: block;
+    height: nb-theme(card-height-medium);
+    width: 100%;
+  }
+
+  /deep/ .echart {
+    height: 100%;
+    width: 100%;
+  }
+
+  nb-card-body {
+    overflow: hidden;
+  }
+
+  //Skill scores panel----------------------------
+  .scoreChartContainer {
+    height: 350px;
+  }
+
+  .skillChartLabels {
+    margin-top: -2rem;
+  }
+
+  .overallSkillChartLabel {
+    font-size: 1.8rem;
+    font-weight: nb-theme(font-weight-light);
+    color: nb-theme(color-fg);
+  }
+
+  .subSkillChartLabels {
+    font-size: 1.3rem;
+    font-weight: nb-theme(font-weight-light);
+    color: nb-theme(color-fg);
+  }
+
+  //Hide Profile card if screen size is limited
+  @include media-breakpoint-down(xl) {
+    ngx-profile-card {
+      display: none;
+    }
+  }
+
+  //Subject scores & over time panels---------------------------
+  nb-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .dropdown {
+      flex-basis: 30%;
+      min-width: 220px;
+    }
+  }
+
+  /deep/ .echart {     
+    position: relative;
+    left: -14px;
+  }
+}

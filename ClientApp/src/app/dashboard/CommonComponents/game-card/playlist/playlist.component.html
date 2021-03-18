@@ -1,0 +1,24 @@
+<div class="playlistContainer">
+  <div class="playlistHeader">
+    <div>My playlist</div>
+    <button type="button" class="btn btn-outline-primary btn-icon" nbPopover="Edit playlist" nbPopoverMode="hint" nbPopoverPlacement="top">
+      <i class="nb-edit"></i>
+    </button>
+  </div>
+  <!--If playlist is not empty-->
+  <div *ngIf="playlist || playlist.length > 0">
+    <div class="playlistBody" *ngFor="let scenario of playlist">
+      <div>
+        <span class="scenarioTitle">{{ scenario?.name }}</span>
+      </div>
+      <div>
+        {{ scenario?.subject }}
+      </div>
+    </div>
+  </div>
+  <!--If playlist is empty-->
+  <div class="playlistBody" *ngIf="!playlist || playlist.length === 0">
+    <p class="text-center">You have no scenarios in your playlist.</p>
+  </div>
+</div>
+

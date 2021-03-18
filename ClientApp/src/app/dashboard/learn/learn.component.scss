@@ -1,0 +1,15 @@
+@import '../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+
+  nb-card-footer {
+    padding-bottom: 0.25rem;
+
+    button {
+      @include nb-ltr(margin, 0 1rem 1rem 0);
+      @include nb-rtl(margin, 0 0 1rem 1rem);
+    }
+  }
+}

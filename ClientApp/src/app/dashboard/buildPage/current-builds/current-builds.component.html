@@ -1,0 +1,41 @@
+<nb-card size="large">
+  <nb-card-body>
+    <nb-tabset fullWidth>
+      <nb-tab tabTitle="In Progress">
+        <nb-list>
+          <nb-list-item *ngFor="let build of inProgress">
+            <div class="top-bar">
+              <span>
+                <h4 style="display: inline-block; position: relative; top: 3px;">{{ build.name }}</h4>
+              </span>
+              <button nbButton status='primary' class='q-button continue template-add' (click)="onTemplateAddButton(template)">Continue</button>
+            </div>
+            <p class="text-hint">{{ build.subject }}</p>
+          </nb-list-item>
+        </nb-list>
+      </nb-tab>
+      <nb-tab tabTitle="Completed">
+        <nb-list>
+          <nb-list-item *ngFor="let build of complete" class="darkened">
+            <h4 style="display: inline-block; position: relative; top: 3px;">{{ build.name }}</h4>
+            <p class="text-hint">{{ build.subject }}</p>
+            <div class="summary-container">
+              <div class="summary">
+                <div class="value" name="plays" [ngClass]="build.plays < 50 ? {'color-danger': true} : (build.plays <= 100 ? {'color-warning': true} : (build.plays <= 200 ? {'color-success': true} : {'color-primary': true}))">{{ build.plays }}</div>
+                <div class="title">Plays</div>
+              </div>
+              <div class="summary">
+                <div class="value" [ngClass]="build.rating < 2.0 ? {'color-danger': true} : (build.rating <= 3.0 ? {'color-warning': true} : (build.rating <= 4.0 ? {'color-success': true} : {'color-primary': true}))">{{ build.rating }}</div>
+                <div class="title">Rating</div>
+              </div>
+              <div class="summary">
+                <div class="value">{{ build.difficulty }}</div>
+                <div class="title">Difficulty</div>
+              </div>
+            </div>
+          </nb-list-item>
+        </nb-list>
+      </nb-tab>
+    </nb-tabset>
+  </nb-card-body>
+</nb-card>

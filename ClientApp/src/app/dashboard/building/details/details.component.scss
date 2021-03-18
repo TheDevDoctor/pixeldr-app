@@ -1,0 +1,133 @@
+@import '../../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+
+    // nb-card-body {
+    //     padding: 0;
+    // }
+
+    .btn-hero.btn-primary  {
+        border-radius: 1.5rem;
+        padding: 0.5rem 1rem;
+        margin: -0.2rem auto;
+        
+    }
+    .nb-arrow-right, .nb-arrow-left {
+        font-size: 2rem;
+    }
+    
+    nb-card-header {
+        display: flex;
+    }
+
+    textarea {
+        resize: none
+    }
+
+    .input-group {
+        padding: 1rem 0rem 0rem 0rem;
+    }
+
+    .input-group-addon {
+        position: absolute;
+        padding: 0.44rem 1rem;
+    }
+
+    .input-with-icon {
+        position: relative;
+        display: flex;
+        margin-left: 3.8rem;
+        width: -moz-calc(100% - 3.8rem);
+        width: -webkit-calc(100% - 3.8rem);
+        width: -o-calc(100% - 3.8rem);
+        width: calc(100% - 3.8rem);
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .input-with-icon-right {
+        position: relative;
+        display: flex;
+        // margin-left: 3.8rem;
+        width: -moz-calc(100% - 3.1rem);
+        width: -webkit-calc(100% - 3.1rem);
+        width: -o-calc(100% - 3.1rem);
+        width: calc(100% - 3.1rem);
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .text-area {
+        padding: 1rem 0rem 0rem 0rem;
+        position: absolute;
+        bottom: 1.2rem;
+        right: 1.2rem;
+        left: 1.2rem;
+        top: 12.3rem;
+    }
+
+    textarea {
+        height: 100%;
+        width: 100%;
+    }
+
+    .col-md-6, .col-lg-5 {
+        margin: 0;
+    }
+
+    div {
+        margin: 0;
+    }
+
+    .vitals-body {
+        padding: 1rem 0;
+    }
+
+    nb-card.xsmall-card {
+        height: 16rem;
+    }
+
+    .col-lg-12.obs-row {
+        padding: 0;
+    }   
+
+    .padded-line {
+        padding: 0.5rem 0rem;
+    }
+
+    #observation-label {
+        padding: 1.2rem 0 0.6rem 1rem;
+    }
+
+    .PC {
+        padding: 0.6rem 1rem;
+    }
+
+    .right {
+        right: 14px;
+        border-right: 2px solid #342e73;
+        border-left: none;
+        
+    }
+
+    // .nav-buttons {
+    //     justify-content: space-around;
+    //     display: flex;
+    //     align-items: center;
+        
+    // }
+
+    // .nav-btn-divider {
+    //     width: 1rem;
+    //     display: inline-block;
+    // }
+
+    // .step-content {
+    //     position: absolute;
+    // }
+
+    // .col-xxl-12 {
+    //     padding: 0;
+    // }
+
+}

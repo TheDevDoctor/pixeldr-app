@@ -1,0 +1,14 @@
+@import '../../styles/themes';
+
+@include nb-install-component() {
+
+    .article-description {
+        padding-bottom: 0.5rem;
+    }
+
+    .article-footer {
+        margin: 0 -1rem -1rem;
+        padding: 0.375rem 1rem;
+        background: rgba(0,0,0,0.1);
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+    nb-chat {
+        margin-bottom: 2rem;
+    }   
+
+    .nb-arrow-right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include nb-rtl(right, auto);
+        @include nb-rtl(left, 0);
+        padding: 1.5rem;
+        cursor: pointer;
+      }
+  
+    nb-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // padding: 1rem 1rem 1rem 1.25rem;
+        @include nb-rtl(padding-right, 1.25rem);
+        @include nb-rtl(padding-left, 4rem);
+    }
+        
+}

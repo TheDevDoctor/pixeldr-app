@@ -1,0 +1,32 @@
+@import '../../../../@theme/styles/themes';
+
+@include nb-install-component() {
+
+  nb-card {
+    width: 26rem;
+  }
+
+  nb-card-body {
+    display: flex;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .sub-title {
+    text-align: center;
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    margin-bottom: 2rem;
+  }
+
+  .row {
+    margin-top: 20%;
+  }
+}

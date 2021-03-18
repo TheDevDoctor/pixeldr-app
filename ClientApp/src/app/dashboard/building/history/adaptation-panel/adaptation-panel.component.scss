@@ -1,0 +1,32 @@
+@import '../../../../@theme/styles/themes';
+
+@include nb-install-component() {
+    nb-card-body {
+        padding: 0;
+    }
+
+    textarea {
+        min-height: 5rem;
+    }
+
+    .nb-close-circled {
+        float: right;
+        // display: inline-block;
+        margin-top: -5px;
+        font-size: 1.6rem;
+        position: relative;
+        border-radius: 5px;
+        padding: 0 0 1px 0;
+        color: white;
+
+        &:hover {
+            background: nb-theme(color-danger);
+            box-shadow: 0 2px 8px 0 #ff388b;
+            // adjust-hue(#ff386a, -10deg)
+        }
+    }
+
+    .question-adapted {
+        display: inline-block;
+    }
+}

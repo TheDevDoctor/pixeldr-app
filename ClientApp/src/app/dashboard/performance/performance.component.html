@@ -1,0 +1,111 @@
+<div class="row">
+  <div class="col-xxxl-9 col-xxl-8 col-xl-12">
+    <nb-card size="medium">
+      <nb-card-header>Skill Scores</nb-card-header>
+      <nb-card-body>
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <div class="overallSkillChart scoreChartContainer" nbPopover="Overall average score (out of 100)" nbPopoverMode="hint" nbPopoverPlacement="bottom">
+                <ngx-percentage-chart [chartValue]="performance?.scores.overall" [showLabel]="true" [labelFontSize]="80"></ngx-percentage-chart>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="row scoreSubChartsContainer">
+                <div class="col">
+                  <div class="historySkillChart scoreChartContainer" nbPopover="Average score for taking patient histories (out of 100)" nbPopoverMode="hint" nbPopoverPlacement="bottom">
+                    <ngx-percentage-chart [chartValue]="performance?.scores.skill.history" [showLabel]="true" [labelFontSize]="40"></ngx-percentage-chart>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="investigationSkillChart scoreChartContainer" nbPopover="Average score for performing correct investigations (out of 100)" nbPopoverMode="hint" nbPopoverPlacement="bottom">
+                    <ngx-percentage-chart [chartValue]="performance?.scores.skill.investigation" [showLabel]="true" [labelFontSize]="40"></ngx-percentage-chart>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="managementSkillChart scoreChartContainer" nbPopover="Average score for managing patients, inc. ordering presciptions and procedures (out of 100)" nbPopoverMode="hint" nbPopoverPlacement="bottom">
+                    <ngx-percentage-chart [chartValue]="performance?.scores.skill.management['overall']" [showLabel]="true" [labelFontSize]="40"></ngx-percentage-chart>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row text-center skillChartLabels">
+            <div class="col-4 overallSkillChartLabel">
+              <p>Overall</p>
+            </div>
+            <div class="col-8 subSkillChartLabels">
+              <div class="row">
+                <div class="col">
+                  <p>History</p>
+                </div>
+                <div class="col">
+                  <p>Investigation</p>
+                </div>
+                <div class="col">
+                  <p>Management</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-xxxl-3 col-xxl-4 profileCard">
+    <ngx-profile-card></ngx-profile-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>
+        Subject scores
+        <div class="dropdown" ngbDropdown>
+          <button class="btn btn-primary" type="button" ngbDropdownToggle>
+            {{ selectedModule.title }}
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu>
+            <li class="dropdown-item" *ngFor="let v of moduleSelectionDropdown" (click)="this.selectedModule = v">{{ v.title }}</li>
+          </ul>
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+        <ngx-echarts-radar [legend]="['Average Subject Scores']" [max]="100" [data]="performance?.subject" *ngIf="performance"></ngx-echarts-radar>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>
+        Skill Development Over Time
+        <div class="dropdown" ngbDropdown>
+          <button class="btn btn-primary" type="button" ngbDropdownToggle>
+            {{ selectedYear.title }}
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu>
+            <li class="dropdown-item" *ngFor="let v of yearSelectionDropdown" (click)="this.selectedYear = v">{{ v.title }}</li>
+          </ul>
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+        <ngx-echarts-area-stack></ngx-echarts-area-stack>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+<!--<div class="row">
+  <div class="col-lg-3">
+    <ngx-scenario-card [scenario]="recentlyPlayedScenarios[0]"></ngx-scenario-card>
+  </div>
+  <div class="col-lg-3">
+    <ngx-scenario-card [scenario]="recentlyPlayedScenarios[1]"></ngx-scenario-card>
+  </div>
+  <div class="col-lg-3">
+    <ngx-scenario-card [scenario]="recentlyPlayedScenarios[2]"></ngx-scenario-card>
+  </div>
+  <div class="col-lg-3">
+    <ngx-scenario-card [scenario]="recentlyPlayedScenarios[3]"></ngx-scenario-card>
+  </div>
+</div>-->

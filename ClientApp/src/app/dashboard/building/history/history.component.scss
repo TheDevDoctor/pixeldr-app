@@ -1,0 +1,211 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+    nb-chat {
+        margin-bottom: 2rem;
+    }   
+
+    // .nb-arrow-right {
+    //     position: absolute;
+    //     right: 0;
+    //     top: 0;
+    //     @include nb-rtl(right, auto);
+    //     @include nb-rtl(left, 0);
+    //     padding: 1.5rem;
+    //     cursor: pointer;
+    //   }
+  
+    nb-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.8rem 1.25rem;
+        @include nb-rtl(padding-right, 1.25rem);
+        @include nb-rtl(padding-left, 4rem);
+    }
+
+   nb-chat {
+        margin-bottom: 0;
+    }
+
+    nb-flip-card {
+        /deep/ .flip-button {
+            top: 0;
+            bottom: initial;
+        }
+
+        /deep/ .flipcard-body .front-container .flip-button {
+            top: 0;
+            bottom: auto;
+        }
+
+        /deep/ .flipcard-body .back-container .flip-button {
+            top: 0;
+            bottom: auto;
+        }
+    }
+
+    .summary-container {
+        display: flex;
+        flex: 1;
+        background-color: rgba(0, 0, 0, 0.2);
+        margin-top: -1px;
+        box-shadow: nb-theme(chart-panel-summary-box-shadow);
+        justify-content: space-between;
+        padding: 1rem;
+        // margin-bottom: 1rem;
+        // position: absolute;
+        width:100%;
+        border:
+          nb-theme(chart-panel-summary-border-width)
+          solid
+          nb-theme(chart-panel-summary-border-color);
+        border-left: none;
+        border-right: none;
+      }
+
+      nb-card-body.template-card {
+        padding: 0;
+        overflow: hidden;
+      }
+
+      nb-card-body .overflow-area {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 87%;
+      }
+
+      .checkbox-container {
+        margin-right: 2rem;
+      }
+
+      .btn.btn-outline-primary {
+        padding: 0.4rem 0.5rem 0.3rem;
+      }
+
+      p.text-hint {
+          margin-bottom: 0.2rem;
+      }
+
+      nb-list {
+          overflow: hidden;
+      }
+
+      nb-list-item {
+          padding: 0.1rem 0;
+      }
+
+    //   .add-button {
+    //       float: 
+    //   }
+    
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+      .q-buttons {
+        float: right;
+        display: grid;
+        margin-right: -10px;
+        padding: 0.3rem 0;
+      }
+
+      .q-buttons, .top-bar {
+
+          .q-button {
+            border-left: 2px solid darken(nb-theme(color-bg), 5%);
+            border-top: 1px solid #352f6e;
+            border-bottom: 1px solid #352f6e;
+            border-radius: 5px;
+            margin-right: -3px;
+
+            &.template-add {
+                margin-right: -20px;
+                margin-top: -5px;
+            }
+            
+            &:focus {
+                outline: none;
+            }
+          }
+          .btn-primary {
+              background-color: darken(nb-theme(card-bg), 2%);
+
+              &:hover {
+                &.edit {
+                    background-image: linear-gradient(to right,#ad59ff,#7659ff);
+                }
+
+                &.correct {
+                    background-image: linear-gradient(to right,#00d9bf,#00d977)
+                }
+              }
+
+              &:active {
+                &.edit {
+                    background-image: linear-gradient(to right,#954ddb,#654ddb);
+                }
+
+                &.correct {
+                    background-image: linear-gradient(to right,#00bba5,#0b6);
+                }
+                
+              }
+          }
+        }
+      
+      .q-container {
+          float: left;
+          padding: 1rem;
+          width: 78%;
+      }  
+      
+      .nb-arrow-right, .nb-arrow-down {
+        font-size: 1.6rem;
+        border-radius: 5px;
+        margin-left: 0.5rem;
+        top: 5px;
+        position: relative;
+        color: white;
+        padding-bottom: 2px;
+
+        &:hover {
+            background-image: linear-gradient(to right,#00b3ff,#08f);
+            -webkit-box-shadow: 0 1px 8px 0 #009dff;
+            box-shadow: 0 1px 8px 0 #009dff;
+        }
+    }
+
+    .template-container {
+        float: left;
+        width: 100%;
+        padding: 1rem 1rem 0.8rem 1rem;
+    }
+
+    nb-accordion {
+        display: unset;
+
+        /deep/ nb-accordion-item-body .item-body {
+            padding: 0.75rem 0;
+        }
+
+        /deep/ nb-accordion-item.expanded nb-accordion-item-body { .ng-trigger-accordionItemBody { height: auto !important; } }
+    }
+
+    .template-q-container {
+        padding: 0.2rem;
+
+        nb-checkbox {
+            /deep/ .customised-control-indicator {
+                top: 0;
+            }
+
+            /deep/ .customised-control {
+                padding: 0.375rem 0.8rem;
+            }
+        }
+    }
+
+}

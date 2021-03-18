@@ -1,0 +1,53 @@
+<nb-card size="medium">
+  <nb-card-body>
+    <div>
+      <div>
+        <div class="username">
+          <span *nbIsGranted="['view', 'user']">
+            {{user?.signinname}}
+          </span>
+        </div>
+        <div class="fullname">
+          <span>{{user?.given_name}} {{user?.family_name}}</span>
+        </div>
+      </div>
+      <span *ngIf="userData" class="rank-badge">
+        <img [src]="returnBadge(userData.ranking.rank)">
+      </span>
+    </div>
+
+    <div class="userStatsContainer">
+      <div class="rankAndLevelContainer">
+        <div class="circ-container">
+          <div class="avatar-container">
+            <img src="assets/images/avatars/male-doc-1.png" class="avatar">
+          </div>
+          <div class="hover-xp">
+            <span class="hover-title large">XP:</span>
+            <span class="hover-value larger">{{ userData?.ranking.xp }}</span>
+            <span class="hover-title">Promotion in:</span>
+            <span class="hover-value">{{ userData?.ranking.xpTilNext }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="col circ-progress-container">
+        <ngx-percentage-chart [chartValue]="this.circPercent" [showLabel]="false" [blurSize]="15"></ngx-percentage-chart>
+      </div>
+
+      <div class="otherStats">
+        <div class="parameter">
+          <span class="parameter-name">Scenarios<br />played</span>
+          <span class="parameter-value">12</span>
+        </div>
+        <div class="parameter">
+          <span class="parameter-name">Scenarios<br />built</span>
+          <span class="parameter-value">6</span>
+        </div>
+        <div class="parameter">
+          <span class="parameter-name">Leaderboard<br />position</span>
+          <span class="parameter-value">1st</span>
+        </div>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

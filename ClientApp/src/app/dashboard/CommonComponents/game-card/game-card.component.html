@@ -1,0 +1,5 @@
+<nb-card [size]="breakpoint.width >= breakpoints.sm ? 'medium' : 'medium'">
+  <i (click)="collapse()" class="nb-arrow-down collapse" [hidden]="isCollapsed()"></i>
+  <ngx-currently-playing [collapsed]="isCollapsed() && breakpoint.width <= breakpoints.md"></ngx-currently-playing>
+  <ngx-playlist></ngx-playlist>
+</nb-card>
